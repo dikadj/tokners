@@ -254,7 +254,9 @@ textarea {
     --white: #ffffff;
     --dimmed-white: #595976;
     --lighter-white: #425376;
+    --lighter-white-2: #DDE2FF;
     --green: #22A75D;
+    --green-opac-25: rgba(34, 167, 93, .25);
   }
  
 
@@ -268,7 +270,9 @@ html, body {
 }
 
 #hero {
-  box-sizing: content-box;
+  /* box-sizing: content-box; */
+  background-color: var(--dark)!important; 
+  background: bottom right / 60% url("../img/geometry-bg.png") no-repeat, top right / contain url("../img/purplish-gradient.png") no-repeat;
 }
 
 /*
@@ -317,7 +321,6 @@ nav button, nav button:active, nav button:focus {
   opacity: 0;
 }
 
-
 /* Buttons */
 
 .btn_rounded_outline {
@@ -325,6 +328,82 @@ nav button, nav button:active, nav button:focus {
   padding: 0.7rem 3rem!important;
 }
 
-.btn_rounded_outline:hover {
+.btn_rounded_outline:hover, .btn_rounded_outline:active, .btn_rounded_outline:focus {
   background: var(--green)!important;
+  box-shadow: 0 15px 25px 0 var(--green-opac-25);
 }
+
+.btn_rounded_outline_active {
+  border: solid 1px var(--green)!important;
+  padding: 0.7rem 3rem!important;
+  background: var(--green)!important;
+  box-shadow: 0 15px 25px 0 var(--green-opac-25);
+}
+
+/* Hero */
+
+.hero_sub {
+  font-family: "Century Gothic Bold"!important;
+  font-size: 14px!important;
+  background: rgb(43,48,135);
+  background: -moz-linear-gradient(0deg, rgba(43,48,135,1) 0%, rgba(0,180,236,1) 100%);
+  background: -webkit-linear-gradient(0deg, rgba(43,48,135,1) 0%, rgba(0,180,236,1) 100%);
+  background: linear-gradient(0deg, rgba(43,48,135,1) 0%, rgba(0,180,236,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#2b3087",endColorstr="#00b4ec",GradientType=1);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 20%;
+}
+
+#hero h1 {
+  font-family: "Century Gothic Bold"!important;
+  font-size: 36px!important;
+}
+
+#hero p {
+  font-family: "Century Gothic Regular"!important;
+  font-size: 14px!important;
+  color: var(--lighter-white-2)!important;
+  opacity: 0.6;
+}
+
+
+/* For Larger Screen */
+@media (min-width: 992px) {
+
+  #hero {
+    background: bottom right / 60% url("../img/geometry-bg.png") no-repeat, top right / 90% url("../img/purplish-gradient-lg.png") no-repeat;
+  }
+
+  .hero_sub {
+    font-size: 16px!important;
+  }
+
+  #hero h1 {
+    font-size: 48px!important;
+  }
+
+  #hero p {
+    font-size: 16px!important;
+  }
+
+}
+
+/* Slick Dots */
+
+.slick-dots span.dot_hollow {
+  font-size: 6px!important;
+}
+.slick-dots span.dot_filled {
+  font-size: 16px!important;
+}
+.slick-dots span.dot_filled, .slick-active span.dot_hollow {
+  display: none;
+}
+.slick-active span.dot_filled {
+  display: block;
+}
+
+
+/* Color Year Carousel */

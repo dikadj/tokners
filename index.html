@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title></title>
+  <title>Primadika Dwijantara</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -16,13 +16,21 @@
   <link rel="apple-touch-icon" href="icon.png">
   <!-- Place favicon.ico in the root directory -->
 
+  <!-- NormalizeCSS -->
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/main.css">
 
-  <meta name="theme-color" content="#fafafa">
-
+  
+  <!-- <meta name="theme-color" content="#fafafa"> -->
+  
   <!-- Bootstrap CSS -->
   <link href="css/bootstrap-5.2.3.min.css" rel="stylesheet">
+  
+  <!-- Slick CSS -->
+  <link href="css/slick-1.8.1.css" rel="stylesheet">
+  <!-- <link href="css/slick-theme-1.8.1.css" rel="stylesheet"> -->
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
@@ -32,7 +40,7 @@
     <section id="header">
 
       <!-- Navbar Side Menu on Small Viewport Start -->
-      <div class="position-fixed w-100 vh-100 navbar_side_menu">
+      <div class="position-fixed w-100 vh-100 navbar_side_menu d-none">
         <nav class="navbar navbar-expand-lg pt-5 pt-lg-0">
           <div class="container-fluid">
             <a href="#" class="navbar-brand text-light px-3">
@@ -137,7 +145,7 @@
       </div>
       <!-- Navbar Side Menu on Small Viewport End -->
       
-      <nav class="position-fixed w-100 navbar navbar-expand-lg pt-5 pt-lg-3">
+      <nav id="largerNavbar" class="position-fixed w-100 navbar navbar-expand-lg pt-5 pt-lg-3">
         <div class="container-fluid">
           <a href="#" class="navbar-brand text-light px-3">
             <!-- Logo for large viewport -->
@@ -185,8 +193,8 @@
                 </li>
               </ul>
               <div class="pt-3 mx-3">
-                <button class="btn text-light" type="button">Sign In</button>
-                <button class="btn text-light btn_rounded_outline rounded-pill mx-3" type="button">Sign Up</button>
+                <button class="btn text-light mt-1" type="button">Sign In</button>
+                <button class="btn text-light mt-1 btn_rounded_outline rounded-pill mx-3" type="button">Sign Up</button>
               </div>
             </div>
           </div>
@@ -195,108 +203,37 @@
     </section>
 
 
-    <section id="hero" style="color: none;" class="w-100 h-100 opacity-0 d-none">
-      <p>x</p>
-      <p>x</p>
-      <p>x</p>
-      <p>x</p>
-      <p>x</p>
-      <p>x</p>
-      <p>x</p>
-      <p>x</p>
-      <p>x</p>
-      <p>x</p>
-      <p>x</p>
-      <p>x</p>
-      <p>x</p>
-      <p>x</p>
-      <p>x</p>
-      <p>x</p>
-      <p>x</p>
-      <p>x</p>
-      <p>x</p>
-      <p>x</p>
-      <p>x</p>
-      <p>x</p>
-      <p>x</p>
-      <p>x</p>
-      <p>x</p>
-      <p>x</p>
-      <p>x</p>
-      <p>x</p>
-      <p>x</p>
-      <p>x</p>
-      <p>x</p>
-      <p>x</p>
-      <p>x</p>
-      <p>x</p>
-      <p>x</p>
-      <p>x</p>
-      <p>x</p>
-      <p>x</p>
-      <p>x</p>
-      <p>x</p>
-      <p>x</p>
-      <p>x</p>
-      <p>x</p>
-      <p>x</p>
-      <p>x</p>
-      <p>x</p>
-      <p>x</p>
-      <p>x</p>
-      <p>x</p>
-      <p>x</p>
-      <p>x</p>
-      <p>x</p>
-      <p>x</p>
-      <p>x</p>
-      <p>x</p>
-      <p>x</p>
-      <p>x</p>
-      <p>x</p>
-      <p>x</p>
-      <p>x</p>
-      <p>x</p>
-      <p>x</p>
-      <p>x</p>
-      <p>x</p>
-      <p>x</p>
-      <p>x</p>
-      <p>x</p>
-      <p>x</p>
-      <p>x</p>
-      <p>x</p>
-      <p>x</p>
-      <p>x</p>
-      <p>x</p>
-      <p>x</p>
-      <p>x</p>
-      <p>x</p>
-      <p>x</p>
-      <p>x</p>
-      <p>x</p>
-      <p>x</p>
-      <p>x</p>
-      <p>x</p>
-      <p>x</p>
-      <p>x</p>
-      <p>x</p>
-      <p>x</p>
-      <p>x</p>
-      <p>x</p>
-      <p>x</p>
-      <p>x</p>
-      <p>x</p>
-      <p>x</p>
-      <p>x</p>
-      <p>x</p>
-      <p>x</p>
-      <p>x</p>
-      <p>x</p>
-      <p>x</p>
-      <p>x</p>
+    <section id="hero" class="vh-100 w-100 d-flex align-items-center">
+      <div class="container-fluid">
+        <div class="row">
+          <div id="hero_intro" class="d-flex flex-column col-12 col-lg-6 px-4 pt-5">
+            <div class="row d-flex justify-content-start justify-content-lg-end">
+              <div class="col-10">
+                <span class="hero_sub">At Tokners we are</span>
+              </div>
+            </div>
+            <div class="row d-flex justify-content-start justify-content-lg-end">
+              <div class="hero_carousel col-12 col-lg-10">
+                <div class="">
+                  <h1 class="w-100 w-lg-75">Reimagining social media through the power of the blockchain.</h1>
+                  <p class="w-100 w-lg-75">We are creating social media 3.0 with influencers, celebrities and creators being able to launch their own digital currency by simply creating a profile with media content posted as Non fungible Tokens that can be owned and traded on the Tknrs network.</p>
+                  <button class="btn text-light btn_rounded_outline_active rounded-pill" type="button">Learn More</button>
+                </div>
+                <div class="">
+                  <h1 class="w-100 w-lg-75">Stand Out <br>from The Crowd.</h1>
+                  <p class="w-100 w-lg-75">Agency is a full-service agency, busy designing and building beautiful digital products, brands, and experiences.</p>
+                  <button class="btn text-light btn_rounded_outline_active rounded-pill" type="button">Learn More</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
+    <section id="color_year_carousel">
+      <div style="width: 100%; height: 100vh; background: green;"></div>
+    </section>
 
   </div>
 
@@ -307,13 +244,18 @@
 
   <!-- Bootstrap JS -->
   <script src="js/vendor/bootstrap-5.2.3.bundle.min.js"></script>
+
+  <!-- Slick JS -->
+  <script src="js/vendor/slick-1.8.1.min.js"></script>
   
   <script src="js/vendor/modernizr-3.11.2.min.js"></script>
   <script src="js/plugins.js"></script>
   <script src="js/main.js"></script>
 
-  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
   <script>
+    
+    // Google Analytics: change UA-XXXXX-Y to be your site's ID.
+    
     window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
     ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
   </script>
