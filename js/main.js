@@ -16,11 +16,31 @@ $(document).ready(function() {
         autoplay: true,
         arrows: false,
         fade: true,
+        // easing: "swing",
+        // rtl: true,
         dots: true,
         appendDots: ".hero_carousel",
-        draggable: true,
-        })    
-    
+        // draggable: true,
+        // adaptiveHeight: true,
+        pauseOnFocus: true,
+        pauseOnHover: false,
+        pauseOnDotsHover: false,
+    })    
+    $(".hero_gadget_carousel").slick({
+        autoplay: true,
+        arrows: false,
+        // fade: true,
+        // easing: "swing",
+        // rtl: true,
+        // dots: true,
+        // appendDots: ".hero_carousel",
+        // centerMode: true,
+        // draggable: true,
+        pauseOnFocus: true,
+        pauseOnHover: false,
+        pauseOnDotsHover: false,
+    })    
+        
 //     // Carousel Dots
     
 //     if ($(".slick-dots li").hasClass("slick-active")) {

@@ -145,7 +145,7 @@
       </div>
       <!-- Navbar Side Menu on Small Viewport End -->
       
-      <nav id="largerNavbar" class="position-fixed w-100 navbar navbar-expand-lg pt-5 pt-lg-3">
+      <nav id="largerNavbar" class="position-fixed w-100 navbar navbar-expand-lg pt-5 pt-lg-3" style="z-index: 9999;">
         <div class="container-fluid">
           <a href="#" class="navbar-brand text-light px-3">
             <!-- Logo for large viewport -->
@@ -206,7 +206,7 @@
     <section id="hero" class="vh-100 w-100 d-flex align-items-center">
       <div class="container-fluid">
         <div class="row">
-          <div id="hero_intro" class="d-flex flex-column col-12 col-lg-6 px-4 pt-5">
+          <div id="hero_intro" class="d-flex flex-column col-12 col-lg-6 px-4 pt-5" style="z-index: 9999; top: 40%;">
             <div class="row d-flex justify-content-start justify-content-lg-end">
               <div class="col-10">
                 <span class="hero_sub">At Tokners we are</span>
@@ -214,16 +214,26 @@
             </div>
             <div class="row d-flex justify-content-start justify-content-lg-end">
               <div class="hero_carousel col-12 col-lg-10">
-                <div class="">
+                <div>
                   <h1 class="w-100 w-lg-75">Reimagining social media through the power of the blockchain.</h1>
                   <p class="w-100 w-lg-75">We are creating social media 3.0 with influencers, celebrities and creators being able to launch their own digital currency by simply creating a profile with media content posted as Non fungible Tokens that can be owned and traded on the Tknrs network.</p>
                   <button class="btn text-light btn_rounded_outline_active rounded-pill" type="button">Learn More</button>
                 </div>
-                <div class="">
+                <div>
                   <h1 class="w-100 w-lg-75">Stand Out <br>from The Crowd.</h1>
                   <p class="w-100 w-lg-75">Agency is a full-service agency, busy designing and building beautiful digital products, brands, and experiences.</p>
                   <button class="btn text-light btn_rounded_outline_active rounded-pill" type="button">Learn More</button>
                 </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6 position-absolute" style="right: 0; top: -20%;">
+            <div class="hero_gadget_carousel" style="transform: rotate(-30deg);">
+              <div>
+                <img src="img/phones-30deg.png" class="img_phones position-relative" width="140%" style="left: -40%;" alt="Phones">
+              </div>
+              <div>
+                <img src="img/laptop-30deg.png" class="img_laptop position-relative" width="150%" style="left: -50%;" alt="Laptop">
               </div>
             </div>
           </div>
@@ -232,7 +242,7 @@
     </section>
 
     <section id="color_year_carousel">
-      <div style="width: 100%; height: 100vh; background: green;"></div>
+      <div class="w-100 vh-100" style="background: green;"></div>
     </section>
 
   </div>

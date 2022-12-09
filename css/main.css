@@ -376,6 +376,10 @@ nav button, nav button:active, nav button:focus {
     background: bottom right / 60% url("../img/geometry-bg.png") no-repeat, top right / 90% url("../img/purplish-gradient-lg.png") no-repeat;
   }
 
+  #hero_intro {
+    /* transform: rotat e(-30deg); */
+  }
+
   .hero_sub {
     font-size: 16px!important;
   }
@@ -390,13 +394,16 @@ nav button, nav button:active, nav button:focus {
 
 }
 
-/* Slick Dots */
+/* Slick */
 
 .slick-dots span.dot_hollow {
   font-size: 6px!important;
 }
 .slick-dots span.dot_filled {
   font-size: 16px!important;
+}
+.slick-dots span.dot_hollow, .slick-dots span.dot_filled {
+  cursor: pointer;
 }
 .slick-dots span.dot_filled, .slick-active span.dot_hollow {
   display: none;
@@ -405,5 +412,26 @@ nav button, nav button:active, nav button:focus {
   display: block;
 }
 
+.slick-list {
+  overflow: visible;
+}
+.slick-slide {
+  transform: translate3d(0,0,0);
+  opacity: 0;
+  transition: opacity 500ms ease-out;
+}
+.slick-slide.slick-current {
+  opacity: 1;
+}
+
+/* .slick-list {
+  overflow: visible;
+}
+.img_laptop, .img_phones {
+  visibility: hidden;
+}
+.slick-active.img_laptop, .slick-active.img_laptop::before, .slick-active.img_phones, .slick-active.img_phones {
+  visibility: visible;
+} */
 
 /* Color Year Carousel */
