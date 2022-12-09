@@ -13,6 +13,8 @@ html {
   color: #222;
   font-size: 1em;
   line-height: 1.4;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 ::-moz-selection {
@@ -251,12 +253,14 @@ textarea {
 
    :root {
     --dark: #0F1320;
+    --less-dark: #171B29;
     --white: #ffffff;
     --dimmed-white: #595976;
     --lighter-white: #425376;
     --lighter-white-2: #DDE2FF;
     --green: #22A75D;
     --green-opac-25: rgba(34, 167, 93, .25);
+    --blue: #2278D4;
   }
  
 
@@ -272,7 +276,7 @@ html, body {
 #hero {
   /* box-sizing: content-box; */
   background-color: var(--dark)!important; 
-  background: bottom right / 60% url("../img/geometry-bg.png") no-repeat, top right / contain url("../img/purplish-gradient.png") no-repeat;
+  background: bottom right / cover url("../img/geometry-bg.png") no-repeat, top right / contain url("../img/purplish-gradient.png") no-repeat;
 }
 
 /*
@@ -376,10 +380,6 @@ nav button, nav button:active, nav button:focus {
     background: bottom right / 60% url("../img/geometry-bg.png") no-repeat, top right / 90% url("../img/purplish-gradient-lg.png") no-repeat;
   }
 
-  #hero_intro {
-    /* transform: rotat e(-30deg); */
-  }
-
   .hero_sub {
     font-size: 16px!important;
   }
@@ -388,9 +388,19 @@ nav button, nav button:active, nav button:focus {
     font-size: 48px!important;
   }
 
+  #hero h1.fs73 {
+    font-size: 73px!important;
+  }
+
   #hero p {
     font-size: 16px!important;
   }
+
+  #color_year_carousel h1 {
+    font-family: "Century Gothic Bold"!important;
+    font-size: 64px!important;
+  }
+  
 
 }
 
@@ -410,6 +420,10 @@ nav button, nav button:active, nav button:focus {
 }
 .slick-active span.dot_filled {
   display: block;
+}
+
+.hero_carousel .slick-dots:last-of-type {
+  visibility: hidden;
 }
 
 .slick-list {
@@ -434,4 +448,47 @@ nav button, nav button:active, nav button:focus {
   visibility: visible;
 } */
 
-/* Color Year Carousel */
+
+#color_year_carousel {
+  background: center center / 96% url("../img/thread2.svg") no-repeat;
+}
+
+#for_creators, #for_holders {
+  background: var(--less-dark); 
+  border-radius: 25px;
+}
+
+#for_holders {
+  transform: translateY(90px);
+}
+
+#for_creators span {
+  color: var(--green);
+}
+
+#for_holders span {
+  color: var(--blue);
+}
+
+#for_creators h3, #for_holders h3 {
+  font-family: "Century Gothic Bold"!important;
+  font-size: 36px!important;
+}
+
+#for_creators p, #for_holders p {
+  font-family: "Century Gothic Regular"!important;
+  font-size: 16px!important;
+  color: rgba(255,255,255,.5);
+}
+
+#makes_different_decor {
+  background: right / cover url("../img/colorful-shapes.jpg") no-repeat;
+  border-radius: 0 400px 0 0; 
+  height: 800px;
+}
+
+#makes_different_text {
+  background: #ffffff; 
+  border-radius: 400px 0 0 0; 
+  height: 800px;
+}

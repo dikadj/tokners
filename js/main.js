@@ -1,5 +1,21 @@
 
 $(document).ready(function() {
+
+    $(document).on("scroll", () => { 
+        if ($("#largerNavbar").offset().top > 150) { // show after scroll to 150px from top
+            $("#largerNavbar").css({
+                background: "top right / 90% url('../img/purplish-gradient-lg.png') no-repeat, #0F1320",
+                opacity: "0.95",
+                backdropFilter: "blur(10px)",
+            })
+        } else {
+            $("#largerNavbar").css({
+                background: "",
+                opacity: "1",
+            })
+        }
+    })
+
     // Open Side Menu
     $(".open_hamburger_menu").on("click", () => {
         $(".navbar_side_menu").toggleClass("d-none")
@@ -19,12 +35,13 @@ $(document).ready(function() {
         // easing: "swing",
         // rtl: true,
         dots: true,
-        appendDots: ".hero_carousel",
+        // appendDots: ".hero_carousel",
         // draggable: true,
         // adaptiveHeight: true,
         pauseOnFocus: true,
         pauseOnHover: false,
         pauseOnDotsHover: false,
+        // infinite: false,
     })    
     $(".hero_gadget_carousel").slick({
         autoplay: true,
@@ -32,13 +49,15 @@ $(document).ready(function() {
         // fade: true,
         // easing: "swing",
         // rtl: true,
-        // dots: true,
-        // appendDots: ".hero_carousel",
+        dots: true,
+        appendDots: ".hero_carousel",
         // centerMode: true,
         // draggable: true,
         pauseOnFocus: true,
         pauseOnHover: false,
         pauseOnDotsHover: false,
+        // infinite: false,
+        autoplay: false
     })    
         
 //     // Carousel Dots
@@ -65,36 +84,22 @@ $(document).ready(function() {
     
 //     // Helper function to detect change in an element
 
-//     const observeChanges = (targetId) => {
+    const config = { attributes: true, childList: false, subtree: false };
+    const observer = new MutationObserver( (mutationList, observer) => { 
+        // callback here
+        if (mutationList[0].target.classList.contains("slick-active")) {
+            $(".hero_carousel .slick-dots li:first-child").trigger("click") //.click()
+        } else {
+            $(".hero_carousel .slick-dots li:nth-child(2)").trigger("click") //.click()
+        }
+    } );
+    
+    observer.observe(
+        $(".hero_carousel .slick-dots li")[0], 
+        { attributes: true, childList: false, subtree: false }
+    );
+        
+    // observer.disconnect()
 
-//         // Select the node that will be observed for mutations
-//         const targetNode = document.getElementById(targetId);
-        
-//         // Options for the observer (which mutations to observe)
-//         const config = { attributes: true, childList: true, subtree: true };
-        
-//         // Callback function to execute when mutations are observed
-//         const callback = (mutationList, observer) => {
-//         for (const mutation of mutationList) {
-//             if (mutation.type === "attributes" && mutation.attributeName === "class") {
-//                 if (mutation.target.classList.includes("slick-active")) {
-//                     $(".slick-active input").prop("checked", true)
-//                 }
-//                 // observer.disconnect()
-//             }
-//         }
-//         };
-        
-//         // Create an observer instance linked to the callback function
-//         const observer = new MutationObserver(callback);
-        
-//         // Start observing the target node for configured mutations
-//         observer.observe(targetNode, config);
-        
-//         // Later, you can stop observing
-//         observer.disconnect();
-//     }
-
-//     observeChanges("hero_intro")
 })
 
