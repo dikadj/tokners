@@ -278,7 +278,7 @@ html, body {
 #hero {
   /* box-sizing: content-box; */
   background-color: var(--dark)!important; 
-  background: bottom right / cover url("../img/geometry-bg.png") no-repeat, top right / contain url("../img/purplish-gradient.png") no-repeat;
+  background: bottom right / contain url("../img/geometry-bg.png") no-repeat, top right / contain url("../img/purplish-gradient.png") no-repeat;
 }
 
 /*
@@ -598,7 +598,7 @@ nav button, nav button:active, nav button:focus {
 }
 
 #tokners_coming {
-  background: var(--blue);
+  z-index: 9997;
 }
 
 #tokners_coming #tokners_coming_bg_layer {
@@ -633,4 +633,48 @@ nav button, nav button:active, nav button:focus {
 #tokners_coming #tokners_coming_illust {
   background: var(--less-dark); 
   clip-path: inset(0 0 0 15% round 25px);
+}
+
+#presale_details {
+  background: center / contain url("../img/triangles-clipped.svg") no-repeat;
+  z-index: 9996;
+  transform: translateY(-20%);
+  margin-bottom: -20%;
+}
+
+#presale_details h1 {
+  font-family: "Century Gothic Bold"!important;
+  font-size: 48px!important;
+}
+
+#presale_details h3 {
+  font-family: "Century Gothic Bold"!important;
+  font-size: 32px!important;
+}
+
+#presale_details p {
+  font-family: "Century Gothic Regular"!important;
+  font-size: 16px!important;
+}
+
+#presale_details p strong {
+  font-family: "Century Gothic Bold"!important;
+  font-size: 16px!important;
+}
+
+#presale_details p.presale_highlight {
+  font-family: "Century Gothic Bold"!important;
+  font-size: 20px!important;
+}
+
+#presale_details #phase_one svg {
+  filter: drop-shadow(0 15px 25px rgb(34 167 93 / .25));
+}
+
+#presale_details #phase_two svg {
+  filter: drop-shadow(0 15px 25px rgb(34 120 212 / .25));
+}
+
+#presale_details #phase_three svg {
+  filter: drop-shadow(0 15px 25px rgb(255 209 0 / .25));
 }

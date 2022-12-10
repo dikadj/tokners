@@ -93,7 +93,7 @@ $(document).ready(function() {
     `)
 
     
-//     // Helper function to detect change in an element
+    // Helper function to detect change in an element
 
     const config = { attributes: true, childList: false, subtree: false };
     const observer = new MutationObserver( (mutationList, observer) => { 
@@ -112,5 +112,8 @@ $(document).ready(function() {
         
     // observer.disconnect()
 
+    // shift #presale_details' content to natural position
+    const presaleDetailsHeight = $("#presale_details").height()
+    $("#presale_details #presale_details_content").css("transform", `translateY(${presaleDetailsHeight/5}px)`)
 })
 
