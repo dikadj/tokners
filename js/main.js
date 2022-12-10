@@ -115,5 +115,6 @@ $(document).ready(function() {
     // shift #presale_details' content to natural position
     const presaleDetailsHeight = $("#presale_details").height()
     $("#presale_details #presale_details_content").css("transform", `translateY(${presaleDetailsHeight/5}px)`)
+    $("#how_to_buy").css("margin-top", `${presaleDetailsHeight/5}px`)
 })
 
