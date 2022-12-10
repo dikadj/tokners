@@ -1,7 +1,7 @@
 
 $(document).ready(function() {
 
-    $(document).on("scroll", () => { 
+    const showNavbarBackground = () => {
         if ($("#largerNavbar").offset().top > 150) { // show after scroll to 150px from top
             $("#largerNavbar").css({
                 background: "top right / 90% url('../img/purplish-gradient-lg.png') no-repeat, #0F1320",
@@ -15,6 +15,14 @@ $(document).ready(function() {
                 backdropFilter: "none",
             })
         }
+    }
+
+    // call once for initial render
+    showNavbarBackground()
+
+    // call on scroll
+    $(document).on("scroll", () => { 
+        showNavbarBackground()
     })
 
     // Open Side Menu

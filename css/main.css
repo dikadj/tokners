@@ -498,7 +498,7 @@ nav button, nav button:active, nav button:focus {
 }
 
 #makes_different_text {
-  background: #ffffff; 
+  background: left / cover url("../img/weentar.svg") no-repeat, var(--white); 
   border-radius: 400px 0 0 0; 
   height: 800px;
 }
@@ -595,4 +595,42 @@ nav button, nav button:active, nav button:focus {
 
 #quartals #q4 ol li::before {
   color: var(--red);
+}
+
+#tokners_coming {
+  background: var(--blue);
+}
+
+#tokners_coming #tokners_coming_bg_layer {
+  background-color: var(--dark);
+  border-radius: 0 0 0 250px;
+}
+
+#tokners_coming h1 {
+  font-family: "Century Gothic Bold"!important;
+  font-size: 48px!important;
+}
+
+#tokners_coming p {
+  font-family: "Century Gothic Regular"!important;
+  font-size: 16px!important;
+  opacity: 0.6;
+}
+
+#tokners_coming p.sub_headline {
+  font-family: "Century Gothic Bold"!important;
+  opacity: 1;
+}
+
+#tokners_coming .tokners_coming_wrapper {
+  margin-bottom: 210px;
+}
+
+#tokners_coming svg.tokners_logo {
+  margin-right: 1.5rem;
+}
+
+#tokners_coming #tokners_coming_illust {
+  background: var(--less-dark); 
+  clip-path: inset(0 0 0 15% round 25px);
 }
