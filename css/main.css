@@ -261,6 +261,8 @@ textarea {
     --green: #22A75D;
     --green-opac-25: rgba(34, 167, 93, .25);
     --blue: #2278D4;
+    --yellow: #FFD100;
+    --red: #E20613;
   }
  
 
@@ -481,6 +483,14 @@ nav button, nav button:active, nav button:focus {
   color: rgba(255,255,255,.5);
 }
 
+#for_creators svg {
+  filter: drop-shadow(0 15px 25px rgb(34 167 93 / .25));
+}
+
+#for_holders svg {
+  filter: drop-shadow(0 15px 25px rgb(34 120 212 / .25));
+}
+
 #makes_different_decor {
   background: right / cover url("../img/colorful-shapes.jpg") no-repeat;
   border-radius: 0 400px 0 0; 
@@ -491,4 +501,98 @@ nav button, nav button:active, nav button:focus {
   background: #ffffff; 
   border-radius: 400px 0 0 0; 
   height: 800px;
+}
+
+#makes_different_text h1 {
+  font-family: "Century Gothic Bold"!important;
+  font-size: 48px;
+  color: var(--dark)!important;
+}
+
+#makes_different_text p.sub_headline {
+  font-family: "Century Gothic Bold"!important;
+  font-size: 16px;
+  color: rgba(15, 19, 32, .6)!important;
+}
+
+#makes_different_text p {
+  font-family: "Century Gothic Regular"!important;
+  font-size: 16px;
+  color: rgba(15, 19, 32, .6)!important;
+}
+
+#quartals {
+  background: var(--white);
+}
+
+#quartals #quartals_bg_layer {
+  background-color: var(--dark);
+  border-radius: 0 250px 0 0;
+}
+
+#quartals .quartals_wrapper {
+  margin: 210px 0;
+}
+
+#quartals #q1 svg {
+  filter: drop-shadow(0 15px 25px rgb(34 167 93 / .25));
+}
+
+#quartals #q2 svg {
+  filter: drop-shadow(0 15px 25px rgb(34 120 212 / .25));
+}
+
+#quartals #q3 svg {
+  filter: drop-shadow(0 15px 25px rgb(255 209 0 / .25));
+}
+
+#quartals #q4 svg {
+  filter: drop-shadow(0 15px 25px rgb(226 6 19 / .25));
+}
+
+#quartals h4 {
+  font-family: "Century Gothic Bold"!important;
+  font-size: 16px;
+}
+
+#quartals ol {
+  list-style: none;
+  /* list-style-position: outside; */
+  counter-reset: quartals_ol;
+  display: table;
+  padding-left: 0!important;
+}
+
+#quartals ol li {
+  font-family: "Century Gothic Regular"!important;
+  font-size: 18px;
+  color: rgba(255, 255, 255, .7);
+  counter-increment: quartals_ol;
+  display: table-row;
+  height: 2rem;
+}
+
+#quartals ol li::before {
+  font-family: "Century Gothic Bold"!important;
+  font-size: 12px;
+  content: "0" counter(quartals_ol);
+  padding-right: 20px;
+  display: table-cell;
+  text-align: right;
+}
+
+#quartals #q1 ol li::before {
+  color: var(--green);
+}
+
+#quartals #q2 ol li::before {
+  color: var(--blue);
+}
+
+#quartals #q3 ol li::before {
+  color: var(--yellow);
+}
+
+#quartals #q4 ol li::before {
+  color: var(--red);
 }

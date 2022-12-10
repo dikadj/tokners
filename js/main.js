@@ -10,8 +10,9 @@ $(document).ready(function() {
             })
         } else {
             $("#largerNavbar").css({
-                background: "",
+                background: "none",
                 opacity: "1",
+                backdropFilter: "none",
             })
         }
     })
@@ -30,6 +31,7 @@ $(document).ready(function() {
     // Enabling Slick JS
     $(".hero_carousel").slick({
         autoplay: true,
+        speed: 500,
         arrows: false,
         fade: true,
         // easing: "swing",
@@ -45,6 +47,7 @@ $(document).ready(function() {
     })    
     $(".hero_gadget_carousel").slick({
         autoplay: true,
+        speed: 500,
         arrows: false,
         // fade: true,
         // easing: "swing",
