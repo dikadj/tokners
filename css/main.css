@@ -639,7 +639,11 @@ nav button, nav button:active, nav button:focus {
   background: center / contain url("../img/triangles-clipped.svg") no-repeat;
   z-index: 9996;
   transform: translateY(-20%);
-  margin-bottom: -20%;
+  /* margin-bottom: -20%; */
+}
+
+#presale_details #presale_details_content {
+  transform: translateY(20%); /* back to natural position */
 }
 
 #presale_details h1 {
@@ -677,4 +681,51 @@ nav button, nav button:active, nav button:focus {
 
 #presale_details #phase_three svg {
   filter: drop-shadow(0 15px 25px rgb(255 209 0 / .25));
+}
+
+#how_to_buy #buy_step_1, #how_to_buy #buy_step_2, #how_to_buy #buy_step_3 {
+  padding: 100px 0; 
+  border-radius: 25px; 
+  clip-path: inset(0.5rem round 25px); 
+  background: var(--less-dark);
+}
+
+#how_to_buy h1 {
+  font-family: "Century Gothic Bold"!important;
+  font-size: 36px!important;
+}
+
+#how_to_buy p, #how_to_buy p strong {
+  font-family: "Century Gothic Bold"!important;
+  font-size: 18px!important;
+}
+
+#how_to_buy #how_to_buy_numbering span {
+  font-family: "Century Gothic Bold"!important;
+  font-size: 12px!important;
+  color: rgba(255, 255, 255, .3);
+}
+
+#footer {
+  margin-top: 210px;
+}
+
+#footer #footer_nav a {
+  font-family: "Century Gothic Bold"!important;
+  font-size: 16px!important;
+  color: var(--white);
+  transition: color 300ms ease-out;
+}
+
+#footer #footer_nav a:hover, #footer #footer_nav a:active, #footer #footer_nav a:focus {
+  color: var(--blue);
+}
+
+#footer #copyright {
+  font-family: "Century Gothic Bold"!important;
+  font-size: 14px!important;
+}
+
+#social_media a:hover circle, #social_media a:active circle, #social_media a:focus circle {
+  fill: var(--white);
 }
