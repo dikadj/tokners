@@ -2,6 +2,14 @@
 <html class="no-js" lang="en">
 
 <head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-TPCRKLF');</script>
+  <!-- End Google Tag Manager -->
+
   <meta charset="utf-8">
   <title>Primadika Dwijantara</title>
   <meta name="description" content="">
@@ -34,13 +42,19 @@
 </head>
 
 <body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TPCRKLF"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  
   <!-- Start Content Here -->
-  <div id="app" class="w-100 h-100"> <!-- width & height 100% for scroll -->
+
+  <div id="app" class=""> <!-- width & height 100% for scroll -->
 
     <section id="header">
 
       <!-- Navbar Side Menu on Small Viewport Start -->
-      <div class="position-fixed w-100 vh-100 navbar_side_menu d-none">
+      <div id="side_medu_sm" class="position-fixed vw-100 w-lg-100 vh-100 navbar_side_menu d-none">
         <nav class="navbar navbar-expand-lg pt-5 pt-lg-0">
           <div class="container-fluid">
             <a href="#" class="navbar-brand text-light px-3">
@@ -71,7 +85,7 @@
               <!-- Close Menu Icon -->
             </button>
           </div>
-          <div class="position-fixed p-5 w-100" id="side_menu">
+          <div class="position-fixed p-5 vw-100 w-lg-100" id="side_menu">
             <a href="#" class="nav-link side_menu_link py-3">About</a>
             <a href="#" class="nav-link side_menu_link py-3">Work</a>
             <a href="#" class="nav-link side_menu_link py-3">Services</a>
@@ -145,7 +159,7 @@
       </div>
       <!-- Navbar Side Menu on Small Viewport End -->
       
-      <nav id="largerNavbar" class="position-fixed w-100 navbar navbar-expand-lg pt-5 pt-lg-3" style="z-index: 9999;">
+      <nav id="largerNavbar" class="position-fixed vw-100 navbar navbar-expand-lg pt-5 pt-lg-3" style="z-index: 9999;">
         <div class="container-fluid">
           <a href="#" class="navbar-brand text-light px-3">
             <!-- Logo for large viewport -->
@@ -176,8 +190,8 @@
             </svg>
             <!-- Hamburger Menu Icon -->
           </button>
-          <div id="navbarMainMenu" class="collapse navbar-collapse">
-            <div class="d-flex justify-content-between w-100">
+          <div id="navbarMainMenu" class="collapse navbar-collapse vw-100">
+            <div class="d-flex justify-content-between text-center w-100">
               <ul class="navbar-nav pt-3 mx-3">
                 <li class="nav-item mx-1">
                   <a href="#" class="nav-link text-light pt-3 mx-3">Our team</a>
@@ -203,17 +217,17 @@
     </section>
 
 
-    <section id="hero" class="vh-100 w-100 d-flex align-items-center">
+    <section id="hero" class="vh-100 vw-100 d-flex align-items-center" style="overflow: hidden;">
       <div class="container-fluid">
         <div class="row">
           <div id="hero_intro" class="d-flex flex-column justify-content-center col-12 col-lg-6 vh-100" style="z-index: 9998;">
-            <div class="row d-flex justify-content-start justify-content-lg-end pt-5 mt-5">
-              <div class="col-10">
+            <div class="row d-flex justify-content-start justify-content-lg-end pt-lg-5 mt-lg-5">
+              <div class="col-12 col-lg-10">
                 <span class="hero_sub">At Tokners we are</span>
               </div>
             </div>
             <div class="row d-flex justify-content-start justify-content-lg-end">
-              <div class="hero_carousel col-12 col-lg-10">
+              <div class="hero_carousel col-12 col-lg-10 overflow-hidden">
                 <div>
                   <h1 class="w-100 w-lg-75">Reimagining social media through the power of the blockchain.</h1>
                   <p class="w-100 w-lg-75">We are creating social media 3.0 with influencers, celebrities and creators being able to launch their own digital currency by simply creating a profile with media content posted as Non fungible Tokens that can be owned and traded on the Tknrs network.</p>
@@ -227,13 +241,19 @@
               </div>
             </div>
           </div>
-          <div class="col-12 col-lg-6 position-absolute" style="right: 0; top: -25%;">
-            <div class="hero_gadget_carousel" style="transform: rotate(-30deg);">
+          <div id="hero_gadget_carousel_wrapper" class="col-12 col-lg-6 position-absolute">
+            <div class="hero_gadget_carousel" style="transform: rotate(-30deg); overflow: clip; overflow-clip-margin: 300px;">
               <div>
-                <img src="img/phones-30deg.png" class="img_phones" width="170%" style="transform: translate(-25%, -5%);" alt="Phones">
+                <!-- for small viewport -->
+                <img src="img/phones-30deg.png" class="img_phones d-lg-none" width="200%" style="transform: translate(-40%, 25%);" alt="Phones"> 
+                <!-- for large viewport -->
+                <img src="img/phones-30deg.png" class="img_phones d-none d-lg-block" width="170%" style="transform: translate(-25%, -5%);" alt="Phones"> 
               </div>
               <div>
-                <img src="img/laptop-30deg.png" class="img_laptop" width="170%" style="transform: translate(-30%, 0);" alt="Laptop">
+                <!-- for small viewport -->
+                <img src="img/phones-30deg.png" class="img_phones d-lg-none" width="200%" style="transform: translate(-40%, 25%);" alt="Phones"> 
+                <!-- for large viewport -->
+                <img src="img/laptop-30deg.png" class="img_laptop d-none d-lg-block" width="170%" style="transform: translate(-30%, 0);" alt="Laptop">
               </div>
             </div>
           </div>
@@ -241,26 +261,105 @@
       </div>
     </section>
 
-    <section id="color_year_carousel" class="w-100 vh-100 d-flex align-items-center">
+    <section id="color_year_carousel_header" class="w-100 vh-100 d-flex align-items-center">
       <div class="container-fluid">
         <div class="row d-flex justify-content-center" >
-          <div class="col-12 col-lg-11">
-            <h1>We Make Designs that Lead <br>and Inspire.</h1>  
-          </div>
-          <div class="col-12 col-lg-11">
-            <!-- Tap year to change color -->
+          <div class="col-12 col-lg-10">
+            <div class="row">
+              <div class="col-8 col-lg-7">
+                <h1>We Make Designs <br class="d-lg-none">that Lead and Inspire.</h1>  
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="for_whom" class="w-100 vh-100 d-flex align-items-center">
+    <section id="color_year_carousel" class="w-100 vh-100 d-flex align-items-center" style="transform: translateY(-25vh);">
+      <div class="container-fluid">
+        <div class="row d-flex justify-content-end" >
+          <div class="col-12 col-lg-11">
+            <div class="row">
+              <div class="col-2 d-flex flex-column justify-content-center pt-5 mt-5" style="z-index: 9992;">
+                <button type="button" class="btn btn-link mb-5 text-decoration-none position-relative" style="transform: translateX(-12px); color: #ffffff;"><span>—</span><span class="px-5">2018</span><span class="position-absolute">xxxxxxxxxxxxxxxxxxxx</span></button>
+                <button type="button" class="btn btn-link mb-5 text-decoration-none position-relative" style="transform: translateX(-12px); color: #ffffff;"><span>—</span><span class="px-5">2019</span><span class="position-absolute">xxxxxxxxxxxxxxxxxxxx</span></button>
+                <button type="button" class="btn btn-link mb-5 text-decoration-none position-relative" style="transform: translateX(-12px); color: #ffffff;"><span>—</span><span class="px-5">2020</span><span class="position-absolute">xxxxxxxxxxxxxxxxxxxx</span></button>
+                <button type="button" class="btn btn-link mb-5 text-decoration-none position-relative" style="transform: translateX(-12px); color: #ffffff;"><span>—</span><span class="px-5">2021</span><span class="position-absolute">xxxxxxxxxxxxxxxxxxxx</span></button>
+                <button type="button" class="btn btn-link mb-5 text-decoration-none position-relative" style="transform: translateX(-12px); color: #ffffff;"><span>—</span><span class="px-5">2022</span><span class="position-absolute">xxxxxxxxxxxxxxxxxxxx</span></button>
+              </div>
+              <div id="color_year_bg_carousel" class="col-10" style="z-index: 9991;">
+                <div id="color_year_2022" style="background: center / contain url('img/color-year-2022.svg') no-repeat;">
+                  <img src="img/screen_and_keyboard.png" class="w-100" alt="screen and keyboard">22
+                </div>
+                <div id="color_year_2021" style="background: center / contain url('img/color-year-2021.svg') no-repeat;">
+                  <img src="img/screen_and_keyboard.png" class="w-100" alt="screen and keyboard">21
+                </div>
+                <div id="color_year_2020" style="background: center / contain url('img/color-year-2020.svg') no-repeat;">
+                  <img src="img/screen_and_keyboard.png" class="w-100" alt="screen and keyboard">20
+                </div>
+                <div id="color_year_2019" style="background: center / contain url('img/color-year-2019.svg') no-repeat;">
+                  <img src="img/screen_and_keyboard.png" class="w-100" alt="screen and keyboard">19
+                </div>
+                <div id="color_year_2018" style="background: center / contain url('img/color-year-2018.svg') no-repeat;">
+                  <img src="img/screen_and_keyboard.png" class="w-100" alt="screen and keyboard">18
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-11 my-5">
+            <div class="row">
+              <div class="col-4 p-5">
+                <div id="color_year_text_carousel" class="px-5">
+                  <div>
+                    <h3>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem ab reprehenderit sequi, iste aperiam, sunt repudiandae, enim velit voluptatibus laborum dolore et. A provident, corporis fugiat mollitia cumque qui ullam.</p>
+                    <button type="button" class="btn" style="color: #ffffff; transform: translateX(-12px);">Contact Us</button>
+                  </div>
+                  <div>
+                    <h3>Lorem ipsum amet consectetur adipisicing elit.</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem ab reprehenderit sequi, iste aperiam, sunt repudiandae, enim velit voluptatibus dolore et. A provident, corporis fugiat mollitia cumque qui ullam.</p>
+                    <button type="button" class="btn" style="color: #ffffff; transform: translateX(-12px);">Contact Us</button>
+                  </div>
+                  <div>
+                    <h3>Lorem ipsum dolor amet consectetur adipisicing elit.</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem  sequi, iste aperiam, sunt repudiandae, enim velit voluptatibus laborum dolore et. A provident, corporis fugiat mollitia cumque qui ullam.</p>
+                    <button type="button" class="btn" style="color: #ffffff; transform: translateX(-12px);">Contact Us</button>
+                  </div>
+                  <div>
+                    <h3>Lorem ipsum dolor, sit amet consectetur adipisicing.</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem ab reprehenderit sequi, iste aperiam, sunt repudiandae, enim velit et. A provident, corporis fugiat mollitia cumque qui ullam.</p>
+                    <button type="button" class="btn" style="color: #ffffff; transform: translateX(-12px);">Contact Us</button>
+                  </div>
+                  <div>
+                    <h3>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem ab reprehenderit sequi, iste aperiam, sunt repudiandae, enim velit voluptatibus laborum dolore et. A provident, corporis fugiat mollitia cumque qui ullam.</p>
+                    <button type="button" class="btn" style="color: #ffffff; transform: translateX(-12px);">Contact Us</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-8 d-flex flex-column justify-content-center text-center">
+                <div id="color_year_number_carousel">
+                  <span>28</span>
+                  <span>27</span>
+                  <span>38</span>
+                  <span>58</span>
+                  <span>19</span>
+                </div>
+                <span>Lorem ipsum</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="for_whom" class="w-100 vh-100 d-flex align-items-center mb-5 pb-5">
       <div class="container-fluid">
         <div class="row d-flex justify-content-lg-center" >
           <div class="col-lg-10">
             <div class="row">
-              <div class="col-lg-6">
-                <div class="w-100 p-5" id="for_creators">
+              <div class="col-12 col-lg-6 px-3 py-2 p-lg-0">
+                <div class="w-100 p-4 p-lg-5" id="for_creators">
                   <!-- Small Crown Icon -->
                   <svg class="mb-3" width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M35 70C54.3301 70 70 54.3301 70 35C70 15.6699 54.3301 0 35 0C15.6699 0 0 15.6699 0 35C0 54.3301 15.6699 70 35 70ZM44.6099 27.4509C44.998 27.3735 45.4004 27.4136 45.7661 27.5659C45.9619 27.647 46.1426 27.7583 46.3018 27.8948C46.4395 28.0129 46.5615 28.1501 46.6631 28.3027C46.8828 28.6316 47 29.0183 47 29.4138V40C46.9985 41.3254 46.4712 42.5964 45.5337 43.5337C44.5967 44.4709 43.3257 44.9983 42 45H28C26.6743 44.9983 25.4033 44.4709 24.4663 43.5337C23.5288 42.5964 23.0015 41.3254 23 40V29.4138C23 29.0183 23.1172 28.6318 23.3374 28.303C23.5571 27.9741 23.8691 27.7178 24.2349 27.5664C24.6001 27.4153 25.002 27.3755 25.3901 27.4526C25.7778 27.5298 26.1343 27.7202 26.4141 28L29 30.5859L33.5859 26C33.9609 25.625 34.4697 25.4143 35 25.4143C35.5303 25.4143 36.0391 25.625 36.4141 26L41 30.5859L43.5859 28C43.8652 27.7192 44.2217 27.5283 44.6099 27.4509Z" fill="#22A75D"/>
@@ -274,8 +373,8 @@
                   <a class="text-decoration-none" href="#"><span><u>Learn More</u> &rarr;</span></a>
                 </div>
               </div>
-              <div class="col-lg-6">
-                <div class="w-100 p-5" id="for_holders">
+              <div class="col-12 col-lg-6">
+                <div class="w-100 p-4  p-lg-5" id="for_holders">
                   <!-- Small Star Icon -->
                   <svg class="mb-3" width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M35 70C54.3301 70 70 54.3301 70 35C70 15.6699 54.3301 0 35 0C15.6699 0 0 15.6699 0 35C0 54.3301 15.6699 70 35 70ZM27.8867 38L24.3306 35.3999C23.7817 34.9985 23.3735 34.4336 23.1646 33.7864C22.9556 33.1389 22.9565 32.4421 23.167 31.7954C23.3779 31.1484 23.7876 30.585 24.3379 30.1848C24.8877 29.7849 25.5503 29.5688 26.2305 29.5679H30.5996L31.9268 25.4319C32.1353 24.781 32.5454 24.2129 33.0977 23.8101C33.6499 23.407 34.3159 23.1899 34.9995 23.1899C35.6836 23.1899 36.3496 23.407 36.9019 23.8101C37.4541 24.2129 37.8643 24.781 38.0728 25.4319L39.3999 29.5679H43.7729C44.1514 29.5684 44.5244 29.6355 44.875 29.7637C45.1553 29.866 45.4214 30.0073 45.6655 30.1848C46.2158 30.585 46.6255 31.1484 46.8364 31.7954C47.0469 32.4421 47.0479 33.1389 46.8389 33.7864C46.6299 34.4336 46.2217 34.9985 45.6729 35.3999L42.1128 38L43.4648 42.187C43.6743 42.8364 43.6729 43.5359 43.46 44.1843C43.3486 44.5242 43.1821 44.8408 42.9692 45.1228C42.7759 45.3789 42.5439 45.6064 42.2803 45.7964C41.7266 46.1956 41.0605 46.4087 40.3779 46.4055C39.6953 46.4021 39.0317 46.1824 38.4819 45.7781L34.9995 43.219L31.5186 45.781C30.9722 46.1931 30.3066 46.4177 29.6221 46.4211C28.937 46.4246 28.2695 46.2068 27.7188 45.8C27.1582 45.4058 26.7402 44.8411 26.5269 44.1899C26.3135 43.5391 26.3164 42.8364 26.5347 42.187L27.8867 38Z" fill="#2278D4"/>
@@ -298,15 +397,15 @@
     <section id="makes_different" class="w-100 d-flex align-items-center">
       <div class="container-fluid">
         <div class="row d-flex justify-content-lg-center" >
-          <div class="col-lg-6" id="makes_different_decor">
+          <div class="col-12 col-lg-6" id="makes_different_decor">
             <!-- Colorful Shapes Background Here -->
           </div>  
-          <div class="col-lg-6 d-flex flex-column justify-content-center" id="makes_different_text">
+          <div class="col-12 col-lg-6 d-flex flex-column justify-content-center px-3 py-5" id="makes_different_text">
             <div class="row d-flex justify-content-end">
-              <div class="col-10">
+              <div class="col-12 col-lg-10">
                 <div class="row">
-                  <div class="col-9" style="transform: translateY(100px) ;">
-                    <h1>What makes us different?</h1>
+                  <div class="col-12 col-lg-10">
+                    <h1 class="my-4">What makes us different?</h1>
                     <p class="sub_headline">We would only launch tokens with the express permission of the creators.</p>
                     <p>There are several thousand celebrities and creators on twitter, tiktok, Instagram and YouTube with followings in the millions who we would be actively engaging before we go viral. </p>
                     <p>We would get them on our platform and they would see the opportunity to create a fan driven digital economy where their digital content can be traded as NFTs and their most loyal fans can have the monetary value of their creator's currency increase significantly as they promote their digital currency across their channels while our native token holders benefit from the Weentar popularity.</p>
@@ -323,9 +422,9 @@
       <div id="quartals_bg_layer">
         <div class="container-fluid">
           <div class="row d-flex justify-content-center">
-            <div class="col-10 quartals_wrapper">
+            <div class="col-12 col-lg-10 quartals_wrapper px-4 py-5 p-lg-0">
               <div class="row">
-                <div id="q1" class="col-3">
+                <div id="q1" class="col-12 col-lg-3 mt-3 mt-lg-0">
                   <div class="d-flex">
                     <!-- Q1 icon -->
                     <svg width="82" height="82" viewBox="0 0 82 82" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -345,7 +444,7 @@
                     <li>Launch of informational website</li>
                   </ol>
                 </div>
-                <div id="q2" class="col-3">
+                <div id="q2" class="col-12 col-lg-3">
                   <div class="d-flex">
                     <!-- Q2 icon -->
                     <svg width="82" height="82" viewBox="0 0 82 82" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -368,7 +467,7 @@
                     <li>Marketing and promotion</li>
                   </ol>
                 </div>
-                <div id="q3" class="col-3">
+                <div id="q3" class="col-12 col-lg-3">
                   <div class="d-flex">
                     <!-- Q3 icon -->
                     <svg width="82" height="82" viewBox="0 0 82 82" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -389,7 +488,7 @@
                     <li>More Marketing and promotion</li>
                   </ol>
                 </div>
-                <div id="q4" class="col-3">
+                <div id="q4" class="col-12 col-lg-3">
                   <div class="d-flex">
                     <!-- Q4 icon -->
                     <svg width="82" height="82" viewBox="0 0 82 82" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -422,10 +521,15 @@
       <div id="tokners_coming_bg_layer">
         <div class="container-fluid">
           <div class="row d-flex justify-content-center">
-            <div class="col-10 tokners_coming_wrapper">
+            <div class="col-12 col-lg-10 tokners_coming_wrapper p-4">
               <div class="row">
-                <div class="col-12 col-lg-5">
-                  <div class="d-flex align-items-center mb-3">
+                <div class="col-12 col-lg-7 d-lg-none mb-5" id="tokners_coming_illust_sm">
+                  <!-- <div id="tokners_coming_illust_bg vh-100 w-100" class="" style="background: red;">
+                  </div> -->
+                  <img style="top: 0;" src="img/iphone-on-hand-w-bg.png" class="w-100" alt="Iphone on hand">
+                </div> 
+                <div class="col-12 col-lg-5 mt-3 mt-lg-0">
+                  <div class="d-none d-lg-flex align-items-center mb-3">
                     <!-- Tokners logo -->
                     <svg class="tokners_logo" style="transform: translateY(-5px);" width="53" height="34" viewBox="0 0 53 34" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M10.2143 12.1997H0.29834L10.7652 33.6843H20.6811L10.2143 12.1997Z" fill="#0B92D2"/>
@@ -440,25 +544,68 @@
                     <!-- Tokners logo -->
                     <h1>Tokner is coming</h1>
                   </div>
-                  <p class="sub_headline">Cryptocurrency adoption is at less than 1% of the global world population with some countries and entities actively fighting against its mass adoption and the smartest developers and nerds holding the fort.</p> 
-                  <p>Bitcoin was the first, and it has since grown to thousands of tokens launched all aiming to fix one problem or the other with some quite simply FOMOing the moment. Our goal is to bring mass adoption to the cryptocurrency space by dumbing it down. How far down? So down that even a celebrity can explain it in simple words to their followers and have them download an app, buy into the social currency of their favourite person and watch their investment as is with other crypto currency project.</p> 
-                  <p>We are trying to do to this space what investment apps did for the "nonexistent retail investors". We are gamefying digital currency, bringing in popular faces instead of hard to understand projects to make it the norm and inadvertently being the "gateway drug" for a lot of people to finally give this space a real look.</p>
-                  <p class="sub_headline">A new digital economy is coming. People would be just as powerful as countries and creators would be paid beyond the peanuts that conventional social media platforms can offer.</p> 
-                  <p>There would be new markets and advertisers with little to offer would not find home there. Like Kanye said,</p>
-                  <p>"Personalities would become the new currency, and services would be built on top of them".</p>
-                  <p>Well, Kanye didn't exactly say that, but it sounds like something we hope he would say.</p> 
-                  <p>Currency is digital, it has been that way for a while now, but this time there would be no dead presidents on the money, there would people like you on the money, and you would own it because it would make the most sense in the world.</p>
-                  <button class="btn text-light mt-1 btn_rounded_outline rounded-pill" type="button">Read More</button>
+                  <div class="d-flex flex-column d-lg-none">
+                    <!-- Weentar logo -->
+                    <svg class="mb-3" width="58" height="34" viewBox="0 0 58 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M0 15.2388L7.03238 33.9998H22.6931L14.2097 12.4346L0 15.2388Z" fill="url(#paint0_linear_216_7322)"/>
+                      <path d="M25.9537 33.9266L17.2607 11.789L25.6595 9.70738L35.0211 7.40479L44.0128 33.9222L25.9537 33.9266Z" fill="url(#paint1_linear_216_7322)"/>
+                      <path d="M17.2543 11.7894L7.03223 33.9999H22.6929L35.0459 7.41406L17.2543 11.7894Z" fill="#FFD100"/>
+                      <path d="M38.9334 6.03933L25.9541 33.9268H44.0065L57.9999 0L38.9334 6.03933Z" fill="#E20613"/>
+                      <path d="M35.0299 7.44472L35.0232 7.42041L17.2539 11.7891L24.4758 30.1613L35.0299 7.44472Z" fill="url(#paint2_linear_216_7322)"/>
+                      <path d="M7.03223 33.9999H22.6929L15.4755 15.6543L7.03223 33.9999Z" fill="url(#paint3_linear_216_7322)"/>
+                      <path d="M25.9541 33.9265H44.0087L36.399 11.4751L25.9541 33.9265Z" fill="url(#paint4_linear_216_7322)"/>
+                      <defs>
+                      <linearGradient id="paint0_linear_216_7322" x1="11.3454" y1="33.9998" x2="11.3454" y2="12.4368" gradientUnits="userSpaceOnUse">
+                      <stop stop-color="#2B3087"/>
+                      <stop offset="0.82" stop-color="#00B4EC"/>
+                      </linearGradient>
+                      <linearGradient id="paint1_linear_216_7322" x1="30.6301" y1="33.9266" x2="30.6301" y2="7.40479" gradientUnits="userSpaceOnUse">
+                      <stop stop-color="#2B3087"/>
+                      <stop offset="1" stop-color="#00B4EC"/>
+                      </linearGradient>
+                      <linearGradient id="paint2_linear_216_7322" x1="26.143" y1="30.1613" x2="26.143" y2="7.42041" gradientUnits="userSpaceOnUse">
+                      <stop stop-color="#009540"/>
+                      <stop offset="1" stop-color="#26A960"/>
+                      </linearGradient>
+                      <linearGradient id="paint3_linear_216_7322" x1="14.8626" y1="15.6543" x2="14.8626" y2="33.9999" gradientUnits="userSpaceOnUse">
+                      <stop stop-color="#3FAE6C"/>
+                      <stop offset="1" stop-color="#006633"/>
+                      </linearGradient>
+                      <linearGradient id="paint4_linear_216_7322" x1="25.9541" y1="22.703" x2="44.0087" y2="22.703" gradientUnits="userSpaceOnUse">
+                      <stop stop-color="#164194"/>
+                      <stop offset="1" stop-color="#005CA9"/>
+                      </linearGradient>
+                      </defs>
+                    </svg>
+                    <!-- Weentar logo -->
+                    <h1 class="mb-4">Weentar is coming</h1>
+                  </div>
+                  <div class="position-relative" id="tokners_coming_p">
+                    <div class="position-absolute w-100 h-50 read_more_overlay d-xxl-none" style="bottom: 0;"></div>
+                    <p class="sub_headline">Cryptocurrency adoption is at less than 1% of the global world population with some countries and entities actively fighting against its mass adoption and the smartest developers and nerds holding the fort.</p> 
+                    <p>Bitcoin was the first, and it has since grown to thousands of tokens launched all aiming to fix one problem or the other with some quite simply FOMOing the moment. Our goal is to bring mass adoption to the cryptocurrency space by dumbing it down. How far down? So down that even a celebrity can explain it in simple words to their followers and have them download an app, buy into the social currency of their favourite person and watch their investment as is with other crypto currency project.</p> 
+                    <p>We are trying to do to this space what investment apps did for the "nonexistent retail investors". We are gamefying digital currency, bringing in popular faces instead of hard to understand projects to make it the norm and inadvertently being the "gateway drug" for a lot of people to finally give this space a real look.</p>
+                    <p class="sub_headline">A new digital economy is coming. People would be just as powerful as countries and creators would be paid beyond the peanuts that conventional social media platforms can offer.</p> 
+                    <p>There would be new markets and advertisers with little to offer would not find home there. Like Kanye said,</p>
+                    <p>"Personalities would become the new currency, and services would be built on top of them".</p>
+                    <p>Well, Kanye didn't exactly say that, but it sounds like something we hope he would say.</p> 
+                    <p>Currency is digital, it has been that way for a while now, but this time there would be no dead presidents on the money, there would people like you on the money, and you would own it because it would make the most sense in the world.</p>
+                  </div>
+                  <button id="read_more_coming" type="button" class="btn btn-link d-xxl-none mt-3" style="transform: translateX(-12px);">Read More</button>
+                  <button id="read_less_coming" type="button" class="btn btn-link d-none d-xxl-none mt-3" style="transform: translateX(-12px);">Hide</button>
+                  <!-- for large viewport -->
+                  <button class="btn text-light mt-1 btn_rounded_outline rounded-pill d-none d-xxl-block" type="button">Read More</button>
                 </div>
-                <div class="col-12 col-lg-7 d-flex align-items-end justify-content-end" id="tokners_coming_illust">
+                <div class="col-12 col-lg-7 d-none d-lg-flex align-items-start justify-content-end" id="tokners_coming_illust">
                  <!-- <div id="tokners_coming_illust_bg vh-100 w-100" class="" style="background: red;">
                  </div> -->
+                 <img style="top: 0;" src="img/iphone-on-hand-w-bg.png" class="w-100" alt="Iphone on hand">
                 </div>
-                <div class="col-12 col-lg-7 d-flex justify-content-end align-items-end position-relative" style="left: calc((5/12)*100%);">
+                <!-- <div class="col-12 col-xxl-7 d-flex justify-content-end align-items-end position-relative">
                   <div class="position-absolute">
                     <img src="img/iphone-on-hand.png" class="w-100" alt="Iphone on hand">
                   </div>
-                </div>
+                </div> -->
               </div>
             </div>
           </div>
@@ -466,17 +613,17 @@
       </div>
     </section>
 
-    <section id="presale_details" class="position-relative">
-      <div id="presale_details_content" class="container-fluid position-absolute h-100">
+    <section id="presale_details" class="position-relative d-flex align-items-center">
+      <div id="presale_details_content" class="container-fluid h-100">
         <div class="row d-flex justify-content-center h-100">
-          <div class="col-12 col-lg-10 presale_details_wrapper">
+          <div class="col-11 col-lg-10 presale_details_wrapper">
             <div>
               <h1 class="text-center mb-3">Presale Details</h1>
             </div>
-            <div class="row">
-              <div id="phase_one" class="col-4 d-flex flex-column align-items-center" style="background: center top / contain url('img/phase-one-bg.svg') no-repeat, #ffffff; color: black; padding: 110px 0; border-radius: 25px; clip-path: inset(0.5rem round 25px);">
+            <div id="phases" class="row">
+              <div id="phase_one" class="col-12 col-lg-4 p-5 px-lg-0 py-lg-5 d-flex flex-column align-items-center" style="background: center top / contain url('img/phase-one-bg.svg') no-repeat, #ffffff; color: black; padding: 110px 0; border-radius: 25px; clip-path: inset(0.5rem round 25px);">
                 <!-- 01 icon -->
-                <svg class="mb-5" width="82" height="82" viewBox="0 0 82 82" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg class="my-5" width="82" height="82" viewBox="0 0 82 82" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M82 41C82 63.6437 63.6437 82 41 82C0 82 0 82 0 41C0 18.3563 18.3563 0 41 0C63.6437 0 82 18.3563 82 41Z" fill="#22A75D"/>
                   <path d="M33.1494 33.8555C34.512 33.8555 35.6842 34.1898 36.666 34.8584C37.6562 35.527 38.418 36.5511 38.9512 37.9307C39.4928 39.3018 39.7637 41.2145 39.7637 43.6689C39.7637 46.1488 39.4886 48.0785 38.9385 49.458C38.3968 50.8376 37.6647 51.8532 36.7422 52.5049C35.8197 53.1481 34.6559 53.4697 33.251 53.4697C31.846 53.4697 30.6654 53.1439 29.709 52.4922C28.7526 51.8405 28.0036 50.8503 27.4619 49.5215C26.9202 48.1927 26.6494 46.3011 26.6494 43.8467C26.6494 40.4189 27.1784 37.9349 28.2363 36.3945C29.4128 34.7018 31.0505 33.8555 33.1494 33.8555ZM33.2383 37.2324C32.6374 37.2324 32.1042 37.4271 31.6387 37.8164C31.1732 38.1973 30.8177 38.8574 30.5723 39.7969C30.3268 40.7363 30.2041 42.1117 30.2041 43.9229C30.2041 46.2842 30.4834 47.9176 31.042 48.8232C31.609 49.7204 32.3411 50.1689 33.2383 50.1689C34.1016 50.1689 34.7871 49.7415 35.2949 48.8867C35.9128 47.8542 36.2217 46.1276 36.2217 43.707C36.2217 41.2526 35.9424 39.5599 35.3838 38.6289C34.8337 37.6979 34.1185 37.2324 33.2383 37.2324ZM44.7783 34.3252H50.0977V53H46.5684V37.6641H42.7217L44.7783 34.3252Z" fill="#0F1320"/>
                 </svg>
@@ -491,9 +638,9 @@
                 <P>Soft Cap: <strong>5000 BNB</strong></P>
                 <P>Hard Cap: <strong>10000 BNB</strong></P>
               </div>
-              <div id="phase_two" class="col-4 d-flex flex-column align-items-center" style="background: center top / contain url('img/phase-two-bg.svg') no-repeat, #ffffff; color: black; padding: 110px 0; transform: translateY(60px); border-radius: 25px; clip-path: inset(0.5rem round 25px);">
+              <div id="phase_two" class="col-12 col-lg-4 p-5 px-lg-0 py-lg-5 d-flex flex-column align-items-center" style="background: center top / contain url('img/phase-two-bg.svg') no-repeat, #ffffff; color: black; padding: 110px 0; border-radius: 25px; clip-path: inset(0.5rem round 25px);">
                 <!-- 02 icon -->
-                <svg class="mb-5" width="82" height="82" viewBox="0 0 82 82" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg class="my-5" width="82" height="82" viewBox="0 0 82 82" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M82 41C82 63.6437 63.6437 82 41 82C0 82 0 82 0 41C0 18.3563 18.3563 0 41 0C63.6437 0 82 18.3563 82 41Z" fill="#2278D4"/>
                   <path d="M32.1494 33.8555C33.512 33.8555 34.6842 34.1898 35.666 34.8584C36.6562 35.527 37.418 36.5511 37.9512 37.9307C38.4928 39.3018 38.7637 41.2145 38.7637 43.6689C38.7637 46.1488 38.4886 48.0785 37.9385 49.458C37.3968 50.8376 36.6647 51.8532 35.7422 52.5049C34.8197 53.1481 33.6559 53.4697 32.251 53.4697C30.846 53.4697 29.6654 53.1439 28.709 52.4922C27.7526 51.8405 27.0036 50.8503 26.4619 49.5215C25.9202 48.1927 25.6494 46.3011 25.6494 43.8467C25.6494 40.4189 26.1784 37.9349 27.2363 36.3945C28.4128 34.7018 30.0505 33.8555 32.1494 33.8555ZM32.2383 37.2324C31.6374 37.2324 31.1042 37.4271 30.6387 37.8164C30.1732 38.1973 29.8177 38.8574 29.5723 39.7969C29.3268 40.7363 29.2041 42.1117 29.2041 43.9229C29.2041 46.2842 29.4834 47.9176 30.042 48.8232C30.609 49.7204 31.3411 50.1689 32.2383 50.1689C33.1016 50.1689 33.7871 49.7415 34.2949 48.8867C34.9128 47.8542 35.2217 46.1276 35.2217 43.707C35.2217 41.2526 34.9424 39.5599 34.3838 38.6289C33.8337 37.6979 33.1185 37.2324 32.2383 37.2324ZM44.0322 40.3428H40.5664C40.6595 38.3285 41.29 36.7458 42.458 35.5947C43.6344 34.4352 45.141 33.8555 46.9775 33.8555C48.1117 33.8555 49.1104 34.0967 49.9736 34.5791C50.8454 35.0531 51.5394 35.7428 52.0557 36.6484C52.5804 37.5456 52.8428 38.4596 52.8428 39.3906C52.8428 40.4993 52.5254 41.6927 51.8906 42.9707C51.2643 44.2487 50.1133 45.7594 48.4375 47.5029L46.3428 49.7119H52.9951V53H40.0586V51.2988L45.835 45.4082C47.2314 43.9948 48.1582 42.8607 48.6152 42.0059C49.0807 41.1426 49.3135 40.3639 49.3135 39.6699C49.3135 38.9505 49.0723 38.3581 48.5898 37.8926C48.1159 37.4186 47.5023 37.1816 46.749 37.1816C45.9873 37.1816 45.3525 37.4652 44.8447 38.0322C44.3369 38.5993 44.0661 39.3695 44.0322 40.3428Z" fill="#0F1320"/>
                 </svg>
@@ -508,9 +655,9 @@
                 <P>Soft Cap: <strong>5000 BNB</strong></P>
                 <P>Hard Cap: <strong>10000 BNB</strong></P>
               </div>
-              <div id="phase_three" class="col-4 d-flex flex-column align-items-center" style="background: center top / contain url('img/phase-three-bg.svg') no-repeat,#ffffff; color: black; padding: 110px 0; border-radius: 25px; clip-path: inset(0.5rem round 25px);">
+              <div id="phase_three" class="col-12 col-lg-4 p-5 px-lg-0 py-lg-5 d-flex flex-column align-items-center" style="background: center top / contain url('img/phase-three-bg.svg') no-repeat,#ffffff; color: black; padding: 110px 0; border-radius: 25px; clip-path: inset(0.5rem round 25px);">
                 <!-- 03 icon -->
-                <svg class="mb-5" width="82" height="82" viewBox="0 0 82 82" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg class="my-5" width="82" height="82" viewBox="0 0 82 82" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M82 41C82 63.6437 63.6437 82 41 82C0 82 0 82 0 41C0 18.3563 18.3563 0 41 0C63.6437 0 82 18.3563 82 41Z" fill="#FFD100"/>
                   <path d="M31.1494 33.8555C32.512 33.8555 33.6842 34.1898 34.666 34.8584C35.6562 35.527 36.418 36.5511 36.9512 37.9307C37.4928 39.3018 37.7637 41.2145 37.7637 43.6689C37.7637 46.1488 37.4886 48.0785 36.9385 49.458C36.3968 50.8376 35.6647 51.8532 34.7422 52.5049C33.8197 53.1481 32.6559 53.4697 31.251 53.4697C29.846 53.4697 28.6654 53.1439 27.709 52.4922C26.7526 51.8405 26.0036 50.8503 25.4619 49.5215C24.9202 48.1927 24.6494 46.3011 24.6494 43.8467C24.6494 40.4189 25.1784 37.9349 26.2363 36.3945C27.4128 34.7018 29.0505 33.8555 31.1494 33.8555ZM31.2383 37.2324C30.6374 37.2324 30.1042 37.4271 29.6387 37.8164C29.1732 38.1973 28.8177 38.8574 28.5723 39.7969C28.3268 40.7363 28.2041 42.1117 28.2041 43.9229C28.2041 46.2842 28.4834 47.9176 29.042 48.8232C29.609 49.7204 30.3411 50.1689 31.2383 50.1689C32.1016 50.1689 32.7871 49.7415 33.2949 48.8867C33.9128 47.8542 34.2217 46.1276 34.2217 43.707C34.2217 41.2526 33.9424 39.5599 33.3838 38.6289C32.8337 37.6979 32.1185 37.2324 31.2383 37.2324ZM43.4385 38.9336H40.0234C40.2012 37.554 40.6963 36.4453 41.5088 35.6074C42.6429 34.4395 44.069 33.8555 45.7871 33.8555C47.319 33.8555 48.6012 34.3421 49.6338 35.3154C50.6748 36.2887 51.1953 37.444 51.1953 38.7812C51.1953 39.6107 50.9668 40.3682 50.5098 41.0537C50.0612 41.7393 49.4053 42.2936 48.542 42.7168C49.6761 43.0553 50.5605 43.6478 51.1953 44.4941C51.8385 45.332 52.1602 46.3223 52.1602 47.4648C52.1602 49.1406 51.5423 50.5625 50.3066 51.7305C49.071 52.89 47.4967 53.4697 45.584 53.4697C43.7728 53.4697 42.2959 52.9238 41.1533 51.832C40.0107 50.7318 39.3844 49.238 39.2744 47.3506H42.791C42.9434 48.3154 43.2777 49.0348 43.7939 49.5088C44.3187 49.9743 44.9788 50.207 45.7744 50.207C46.6038 50.207 47.2894 49.9404 47.8311 49.4072C48.3812 48.874 48.6562 48.2223 48.6562 47.4521C48.6562 46.6058 48.2881 45.8906 47.5518 45.3066C46.8154 44.7227 45.7533 44.4222 44.3652 44.4053V41.3584C45.2201 41.2907 45.8548 41.1595 46.2695 40.9648C46.6927 40.7617 47.0186 40.4867 47.2471 40.1396C47.484 39.7926 47.6025 39.4245 47.6025 39.0352C47.6025 38.5273 47.4248 38.1084 47.0693 37.7783C46.7139 37.4398 46.2484 37.2705 45.6729 37.2705C45.165 37.2705 44.7038 37.4271 44.2891 37.7402C43.8743 38.0449 43.5908 38.4427 43.4385 38.9336Z" fill="#0F1320"/>
                 </svg>
@@ -529,203 +676,210 @@
           </div>
         </div>
       </div>
-      <img src="img/triangles-clipped.svg" class="w-100" style="visibility: hidden;"> <!-- to keep bg size the same -->
+      <img src="img/triangles-clipped.svg" class="w-100 d-none d-lg-block" style="visibility: hidden;"> <!-- to keep bg size the same -->
+      <img src="img/triangles-clipped-sm.svg" class="w-100 d-lg-none" style="visibility: hidden;"> <!-- to keep bg size the same -->
     </section>
 
-    <section id="how_to_buy" class="position-relative mb-5">
-      <div id="how_to_buy_content" class="container-fluid">
-        <div class="row d-flex justify-content-center align-items-center">
-          <div class="col-12 col-lg-10 how_to_buy_wrapper">
-            <div>
-              <h1 class="text-center mb-3">How to buy</h1>
-            </div>
-            <div class="row">
-              <div id="buy_step_1" class="col-4 d-flex flex-column align-items-center">
-                <div class="row d-flex justify-content-center">
-                  <div class="col-6">
-                    <P><strong>First Connect your Metamask or TrustWallet to the "Connect Wallet" on the Homepage.</strong></P>
+    <div id="footer_wrapper" class="pb-lg-5 mt-4 mt-lg-0">
+      <section id="how_to_buy" class="position-relative mb-5">
+        <div id="how_to_buy_content" class="container-fluid">
+          <div class="row d-flex justify-content-center align-items-center">
+            <div class="col-12 col-lg-10 how_to_buy_wrapper">
+              <div>
+                <h1 class="text-center mb-3">How to buy</h1>
+              </div>
+              <div class="row">
+                <div id="buy_step_1" class="col-12 col-lg-4 d-flex flex-column align-items-center">
+                  <div class="row d-flex justify-content-center">
+                    <div class="col-10 col-lg-6">
+                      <div class="htb_num pb-3 d-lg-none"><span>01</span></div>
+                      <P><strong>First Connect your Metamask or TrustWallet to the "Connect Wallet" on the Homepage.</strong></P>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div id="buy_step_2" class="col-4 d-flex flex-column align-items-center" style="transform: translateY(60px);">
-                <div class="row d-flex justify-content-center">
-                  <div class="col-6">
-                    <P><strong>Then send minimum of 0.1 BNB or maximum of 10 BNB to the Presale wallet.</strong></P>
+                <div id="buy_step_2" class="col-12 col-lg-4 d-flex flex-column align-items-center">
+                  <div class="row d-flex justify-content-center">
+                    <div class="col-10 col-lg-6">
+                      <div class="htb_num pb-3 d-lg-none"><span>02</span></div>
+                      <P><strong>Then send minimum of 0.1 BNB or maximum of 10 BNB to the Presale wallet.</strong></P>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div id="buy_step_3" class="col-4 d-flex flex-column align-items-center">
-                <div class="row d-flex justify-content-center">
-                  <div class="col-6">
-                    <P><strong>Then after you will received your $WNTR to your address within 24hours.</strong></P>
+                <div id="buy_step_3" class="col-12 col-lg-4 d-flex flex-column align-items-center">
+                  <div class="row d-flex justify-content-center">
+                    <div class="col-10 col-lg-6">
+                      <div class="htb_num pb-3 d-lg-none"><span>03</span></div>
+                      <P><strong>Then after you will received your $WNTR to your address within 24hours.</strong></P>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div id="how_to_buy_chevron" class="position-absolute col-10 h-100">
-                <div class="row h-100 d-flex justify-content-center align-items-center">
-                  <div class="col-2 d-flex justify-content-center chevron_bridge">
-                    <span class="rounded-circle d-flex justify-content-center align-items-center" style="background: #0F1320; width: 86px; height: 86px;">
-                      <!-- Chevron icon -->
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M9 18L15 12L9 6" stroke="#22A75D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                      </svg>                  
-                      <!-- Chevron icon -->
-                    </span>
-                  </div>
-                  <div class="col-2">
-                    <!-- to create empty space between chevron bridges -->
-                  </div>
-                  <div class="col-2 d-flex justify-content-center chevron_bridge">
-                    <span class="rounded-circle d-flex justify-content-center align-items-center" style="background: #0F1320; width: 86px; height: 86px;">
-                      <!-- Chevron icon -->
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M9 18L15 12L9 6" stroke="#FFD100" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                      </svg>                    
-                      <!-- Chevron icon -->
-                    </span> 
+                <div id="how_to_buy_chevron" class="position-absolute col-12 col-lg-10 h-100">
+                  <div class="row d-flex justify-content-center align-items-center" style="height: 94%;">
+                    <div class="col-12 col-lg-4 d-flex justify-content-center align-items-center chevron_bridge chev1">
+                      <span>
+                        <!-- Chevron icon -->
+                        <svg width="86" height="86" viewBox="0 0 86 86" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <circle cx="43" cy="43" r="43" fill="#0F1320"/>
+                          <path d="M40 49L46 43L40 37" stroke="#22A75D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <!-- Chevron icon -->
+                      </span>
+                    </div>
+                    <div class="col-12 col-lg-4 d-flex justify-content-center align-items-center chevron_bridge chev2">
+                      <span>
+                        <!-- Chevron icon -->
+                        <svg width="86" height="86" viewBox="0 0 86 86" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <circle cx="43" cy="43" r="43" fill="#0F1320"/>
+                          <path d="M40 49L46 43L40 37" stroke="#FFD100" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>                    
+                        <!-- Chevron icon -->
+                      </span> 
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div id="how_to_buy_numbering" class="position-absolute col-10 h-100">
-                <div class="row">
-                  <div class="col-4 mt-4"><span class="px-3">01</span></div>
-                  <div class="col-4 mt-4" style="transform: translateY(60px);"><span class="px-3">02</span></div>
-                  <div class="col-4 mt-4"><span class="px-3">03</span></div>
+                <div id="how_to_buy_numbering" class="position-absolute col-10 h-100 d-none d-lg-block">
+                  <div class="row">
+                    <div class="col-4 mt-4 01"><span class="px-3">01</span></div>
+                    <div class="col-4 mt-4 02" style="transform: translateY(60px);"><span class="px-3">02</span></div>
+                    <div class="col-4 mt-4 03"><span class="px-3">03</span></div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-
-    <section id="footer" class="">
-      <div id="footer_nav" class="d-flex justify-content-center mb-5 pb-5">
-        <a class="mx-4" href="#">OUR TEAM</a>
-        <span class="mx-4">/</span>
-        <a class="mx-4" href="#">TOKENS</a>
-        <span class="mx-4">/</span>
-        <a class="mx-4" href="#">CONNECT WALLET</a>
-        <span class="mx-4">/</span>
-        <a class="mx-4" href="#">LIGHTPAPER</a>
-      </div>
-      <div class="container-fluid mb-5 pb-5">
-        <div class="row d-flex justify-content-center">
-          <div class="col-12 col-lg-10">
-            <div class="row">
-              <div class="col-4 d-flex justify-content-start">
-                <svg width="188" height="30" viewBox="0 0 188 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M8.89937 10.7179H0L9.39378 29.9999H18.2932L8.89937 10.7179Z" fill="#0B92D2"/>
-                  <path d="M27.1923 5.7738H18.293L28.346 29.9999H37.2453L27.1923 5.7738Z" fill="#137BC0"/>
-                  <path d="M18.293 5.7738H27.1924L18.293 29.9999H9.39363L18.293 5.7738Z" fill="#0E763F"/>
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M13.2192 19.5854L9.39355 29.9998H18.2929L13.2192 19.5854Z" fill="#FFD100"/>
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M9.39355 29.9998H18.2929L13.2192 19.5854L9.39355 29.9998Z" fill="#FFD100"/>
-                  <path d="M38.399 0.500122H47.2983L37.0805 29.9999H28.1812L38.399 0.500122Z" fill="#E20613"/>
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M32.3049 18.0944L28.2561 29.7835L28.346 30H37.2453L37.1555 29.7835L32.3049 18.0944Z" fill="#0E4B9C"/>
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M37.0805 30L37.1555 29.7835L32.3049 18.0944L28.2561 29.7835L28.1812 30H37.0805Z" fill="#0E4B9C"/>
-                  <path d="M61.8801 13.104H55V9.232H73.7359V13.104H66.8559V29.7653H61.8801V13.104Z" fill="white"/>
-                  <path d="M82.2585 30C80.518 30 78.9516 29.6578 77.5592 28.9733C76.1873 28.2693 75.1123 27.3013 74.3341 26.0693C73.556 24.8373 73.167 23.4391 73.167 21.8747C73.167 20.3102 73.556 18.912 74.3341 17.68C75.1123 16.448 76.1873 15.4898 77.5592 14.8053C78.9516 14.1013 80.518 13.7493 82.2585 13.7493C83.999 13.7493 85.5552 14.1013 86.9272 14.8053C88.2991 15.4898 89.3741 16.448 90.1522 17.68C90.9303 18.912 91.3193 20.3102 91.3193 21.8747C91.3193 23.4391 90.9303 24.8373 90.1522 26.0693C89.3741 27.3013 88.2991 28.2693 86.9272 28.9733C85.5552 29.6578 83.999 30 82.2585 30ZM82.2585 26.2453C83.4871 26.2453 84.4905 25.8542 85.2686 25.072C86.0671 24.2702 86.4664 23.2044 86.4664 21.8747C86.4664 20.5449 86.0671 19.4889 85.2686 18.7067C84.4905 17.9049 83.4871 17.504 82.2585 17.504C81.0299 17.504 80.0164 17.9049 79.2178 18.7067C78.4192 19.4889 78.0199 20.5449 78.0199 21.8747C78.0199 23.2044 78.4192 24.2702 79.2178 25.072C80.0164 25.8542 81.0299 26.2453 82.2585 26.2453Z" fill="white"/>
-                  <path d="M101.617 23.576L99.3135 25.7467V29.7653H94.5221V8H99.3135V20.32L106.316 13.984H112.029L105.149 20.672L112.644 29.7653H106.839L101.617 23.576Z" fill="white"/>
-                  <path d="M124.722 13.7493C126.77 13.7493 128.418 14.336 129.667 15.5093C130.937 16.6827 131.572 18.4231 131.572 20.7307V29.7653H126.78V21.4347C126.78 20.1831 126.493 19.2542 125.92 18.648C125.347 18.0222 124.517 17.7093 123.432 17.7093C122.224 17.7093 121.262 18.0711 120.545 18.7947C119.828 19.4987 119.47 20.5547 119.47 21.9627V29.7653H114.679V13.984H119.255V15.832C119.89 15.1671 120.678 14.6587 121.62 14.3067C122.562 13.9351 123.596 13.7493 124.722 13.7493Z" fill="white"/>
-                  <path d="M152.281 21.9333C152.281 21.992 152.251 22.4027 152.189 23.1653H139.688C139.914 24.1431 140.446 24.9156 141.286 25.4827C142.125 26.0498 143.169 26.3333 144.418 26.3333C145.278 26.3333 146.036 26.216 146.691 25.9813C147.367 25.7271 147.992 25.336 148.565 24.808L151.114 27.448C149.558 29.1493 147.285 30 144.296 30C142.432 30 140.784 29.6578 139.351 28.9733C137.917 28.2693 136.811 27.3013 136.033 26.0693C135.255 24.8373 134.866 23.4391 134.866 21.8747C134.866 20.3298 135.245 18.9413 136.003 17.7093C136.781 16.4578 137.835 15.4898 139.166 14.8053C140.518 14.1013 142.023 13.7493 143.681 13.7493C145.299 13.7493 146.763 14.0818 148.074 14.7467C149.384 15.4116 150.408 16.3698 151.145 17.6213C151.903 18.8533 152.281 20.2907 152.281 21.9333ZM143.712 17.2107C142.627 17.2107 141.716 17.504 140.978 18.0907C140.241 18.6773 139.791 19.4791 139.627 20.496H147.766C147.603 19.4987 147.152 18.7067 146.415 18.12C145.678 17.5138 144.777 17.2107 143.712 17.2107Z" fill="white"/>
-                  <path d="M160.048 16.0667C160.621 15.304 161.389 14.7271 162.352 14.336C163.334 13.9449 164.461 13.7493 165.73 13.7493V17.9733C165.198 17.9342 164.839 17.9147 164.655 17.9147C163.283 17.9147 162.208 18.2862 161.43 19.0293C160.652 19.7529 160.263 20.848 160.263 22.3147V29.7653H155.471V13.984H160.048V16.0667Z" fill="white"/>
-                  <path d="M174.198 30C172.827 30 171.485 29.8436 170.175 29.5307C168.864 29.1982 167.82 28.7876 167.042 28.2987L168.639 25.0133C169.376 25.4631 170.267 25.8347 171.311 26.128C172.356 26.4018 173.379 26.5387 174.383 26.5387C176.41 26.5387 177.424 26.0596 177.424 25.1013C177.424 24.6516 177.147 24.3289 176.594 24.1333C176.041 23.9378 175.192 23.7716 174.045 23.6347C172.693 23.4391 171.577 23.2142 170.697 22.96C169.817 22.7058 169.049 22.256 168.393 21.6107C167.759 20.9653 167.441 20.0462 167.441 18.8533C167.441 17.856 167.738 16.976 168.332 16.2133C168.946 15.4311 169.827 14.8249 170.973 14.3947C172.141 13.9644 173.513 13.7493 175.089 13.7493C176.256 13.7493 177.413 13.8764 178.56 14.1307C179.727 14.3653 180.69 14.6978 181.447 15.128L179.85 18.384C178.396 17.6018 176.809 17.2107 175.089 17.2107C174.065 17.2107 173.298 17.3476 172.786 17.6213C172.274 17.8951 172.018 18.2471 172.018 18.6773C172.018 19.1662 172.294 19.5084 172.847 19.704C173.4 19.8996 174.28 20.0853 175.489 20.2613C176.84 20.4764 177.946 20.7111 178.806 20.9653C179.666 21.2 180.413 21.64 181.048 22.2853C181.683 22.9307 182 23.8302 182 24.984C182 25.9618 181.693 26.832 181.079 27.5947C180.464 28.3573 179.563 28.9538 178.376 29.384C177.209 29.7947 175.816 30 174.198 30Z" fill="white"/>
-                </svg>
-              </div>
-              <div id="social_media" class="col-4 d-flex justify-content-center">
-                <!-- twitter -->
-                <div id="social_twitter" class="mx-1">
-                  <a href="#">
-                    <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <circle opacity="0.05" cx="25" cy="25" r="24" stroke="white" stroke-width="2"/>
-                      <path d="M34.1668 17.4996C33.3688 18.0625 32.4853 18.493 31.5502 18.7746C31.0483 18.1975 30.3813 17.7885 29.6394 17.6029C28.8974 17.4172 28.1164 17.4639 27.4019 17.7366C26.6874 18.0093 26.0739 18.4949 25.6443 19.1277C25.2148 19.7605 24.9899 20.5099 25.0002 21.2746V22.1079C23.5357 22.1459 22.0846 21.8211 20.776 21.1625C19.4674 20.5038 18.3421 19.5318 17.5002 18.3329C17.5002 18.3329 14.1668 25.8329 21.6668 29.1663C19.9506 30.3312 17.9061 30.9154 15.8335 30.8329C23.3335 34.9996 32.5002 30.8329 32.5002 21.2496C32.4994 21.0175 32.4771 20.7859 32.4335 20.5579C33.284 19.7192 33.8842 18.6602 34.1668 17.4996V17.4996Z" fill="white"/>
-                    </svg>
-                  </a>
+      </section>
+  
+      <section id="footer" class="">
+        <div id="footer_nav" class="d-none d-lg-flex justify-content-center pb-5 mb-5">
+          <a class="mx-4" href="#">OUR TEAM</a>
+          <span class="mx-4">/</span>
+          <a class="mx-4" href="#">TOKENS</a>
+          <span class="mx-4">/</span>
+          <a class="mx-4" href="#">CONNECT WALLET</a>
+          <span class="mx-4">/</span>
+          <a class="mx-4" href="#">LIGHTPAPER</a>
+        </div>
+        <div class="container-fluid pb-5">
+          <div class="row d-flex justify-content-center">
+            <div class="col-12 col-lg-10">
+              <div class="row">
+                <div class="col-12 col-lg-4 d-flex justify-content-center justify-content-lg-start mb-4">
+                  <!-- logo tokners -->
+                  <svg width="188" height="30" viewBox="0 0 188 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8.89937 10.7179H0L9.39378 29.9999H18.2932L8.89937 10.7179Z" fill="#0B92D2"/>
+                    <path d="M27.1923 5.7738H18.293L28.346 29.9999H37.2453L27.1923 5.7738Z" fill="#137BC0"/>
+                    <path d="M18.293 5.7738H27.1924L18.293 29.9999H9.39363L18.293 5.7738Z" fill="#0E763F"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M13.2192 19.5854L9.39355 29.9998H18.2929L13.2192 19.5854Z" fill="#FFD100"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M9.39355 29.9998H18.2929L13.2192 19.5854L9.39355 29.9998Z" fill="#FFD100"/>
+                    <path d="M38.399 0.500122H47.2983L37.0805 29.9999H28.1812L38.399 0.500122Z" fill="#E20613"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M32.3049 18.0944L28.2561 29.7835L28.346 30H37.2453L37.1555 29.7835L32.3049 18.0944Z" fill="#0E4B9C"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M37.0805 30L37.1555 29.7835L32.3049 18.0944L28.2561 29.7835L28.1812 30H37.0805Z" fill="#0E4B9C"/>
+                    <path d="M61.8801 13.104H55V9.232H73.7359V13.104H66.8559V29.7653H61.8801V13.104Z" fill="white"/>
+                    <path d="M82.2585 30C80.518 30 78.9516 29.6578 77.5592 28.9733C76.1873 28.2693 75.1123 27.3013 74.3341 26.0693C73.556 24.8373 73.167 23.4391 73.167 21.8747C73.167 20.3102 73.556 18.912 74.3341 17.68C75.1123 16.448 76.1873 15.4898 77.5592 14.8053C78.9516 14.1013 80.518 13.7493 82.2585 13.7493C83.999 13.7493 85.5552 14.1013 86.9272 14.8053C88.2991 15.4898 89.3741 16.448 90.1522 17.68C90.9303 18.912 91.3193 20.3102 91.3193 21.8747C91.3193 23.4391 90.9303 24.8373 90.1522 26.0693C89.3741 27.3013 88.2991 28.2693 86.9272 28.9733C85.5552 29.6578 83.999 30 82.2585 30ZM82.2585 26.2453C83.4871 26.2453 84.4905 25.8542 85.2686 25.072C86.0671 24.2702 86.4664 23.2044 86.4664 21.8747C86.4664 20.5449 86.0671 19.4889 85.2686 18.7067C84.4905 17.9049 83.4871 17.504 82.2585 17.504C81.0299 17.504 80.0164 17.9049 79.2178 18.7067C78.4192 19.4889 78.0199 20.5449 78.0199 21.8747C78.0199 23.2044 78.4192 24.2702 79.2178 25.072C80.0164 25.8542 81.0299 26.2453 82.2585 26.2453Z" fill="white"/>
+                    <path d="M101.617 23.576L99.3135 25.7467V29.7653H94.5221V8H99.3135V20.32L106.316 13.984H112.029L105.149 20.672L112.644 29.7653H106.839L101.617 23.576Z" fill="white"/>
+                    <path d="M124.722 13.7493C126.77 13.7493 128.418 14.336 129.667 15.5093C130.937 16.6827 131.572 18.4231 131.572 20.7307V29.7653H126.78V21.4347C126.78 20.1831 126.493 19.2542 125.92 18.648C125.347 18.0222 124.517 17.7093 123.432 17.7093C122.224 17.7093 121.262 18.0711 120.545 18.7947C119.828 19.4987 119.47 20.5547 119.47 21.9627V29.7653H114.679V13.984H119.255V15.832C119.89 15.1671 120.678 14.6587 121.62 14.3067C122.562 13.9351 123.596 13.7493 124.722 13.7493Z" fill="white"/>
+                    <path d="M152.281 21.9333C152.281 21.992 152.251 22.4027 152.189 23.1653H139.688C139.914 24.1431 140.446 24.9156 141.286 25.4827C142.125 26.0498 143.169 26.3333 144.418 26.3333C145.278 26.3333 146.036 26.216 146.691 25.9813C147.367 25.7271 147.992 25.336 148.565 24.808L151.114 27.448C149.558 29.1493 147.285 30 144.296 30C142.432 30 140.784 29.6578 139.351 28.9733C137.917 28.2693 136.811 27.3013 136.033 26.0693C135.255 24.8373 134.866 23.4391 134.866 21.8747C134.866 20.3298 135.245 18.9413 136.003 17.7093C136.781 16.4578 137.835 15.4898 139.166 14.8053C140.518 14.1013 142.023 13.7493 143.681 13.7493C145.299 13.7493 146.763 14.0818 148.074 14.7467C149.384 15.4116 150.408 16.3698 151.145 17.6213C151.903 18.8533 152.281 20.2907 152.281 21.9333ZM143.712 17.2107C142.627 17.2107 141.716 17.504 140.978 18.0907C140.241 18.6773 139.791 19.4791 139.627 20.496H147.766C147.603 19.4987 147.152 18.7067 146.415 18.12C145.678 17.5138 144.777 17.2107 143.712 17.2107Z" fill="white"/>
+                    <path d="M160.048 16.0667C160.621 15.304 161.389 14.7271 162.352 14.336C163.334 13.9449 164.461 13.7493 165.73 13.7493V17.9733C165.198 17.9342 164.839 17.9147 164.655 17.9147C163.283 17.9147 162.208 18.2862 161.43 19.0293C160.652 19.7529 160.263 20.848 160.263 22.3147V29.7653H155.471V13.984H160.048V16.0667Z" fill="white"/>
+                    <path d="M174.198 30C172.827 30 171.485 29.8436 170.175 29.5307C168.864 29.1982 167.82 28.7876 167.042 28.2987L168.639 25.0133C169.376 25.4631 170.267 25.8347 171.311 26.128C172.356 26.4018 173.379 26.5387 174.383 26.5387C176.41 26.5387 177.424 26.0596 177.424 25.1013C177.424 24.6516 177.147 24.3289 176.594 24.1333C176.041 23.9378 175.192 23.7716 174.045 23.6347C172.693 23.4391 171.577 23.2142 170.697 22.96C169.817 22.7058 169.049 22.256 168.393 21.6107C167.759 20.9653 167.441 20.0462 167.441 18.8533C167.441 17.856 167.738 16.976 168.332 16.2133C168.946 15.4311 169.827 14.8249 170.973 14.3947C172.141 13.9644 173.513 13.7493 175.089 13.7493C176.256 13.7493 177.413 13.8764 178.56 14.1307C179.727 14.3653 180.69 14.6978 181.447 15.128L179.85 18.384C178.396 17.6018 176.809 17.2107 175.089 17.2107C174.065 17.2107 173.298 17.3476 172.786 17.6213C172.274 17.8951 172.018 18.2471 172.018 18.6773C172.018 19.1662 172.294 19.5084 172.847 19.704C173.4 19.8996 174.28 20.0853 175.489 20.2613C176.84 20.4764 177.946 20.7111 178.806 20.9653C179.666 21.2 180.413 21.64 181.048 22.2853C181.683 22.9307 182 23.8302 182 24.984C182 25.9618 181.693 26.832 181.079 27.5947C180.464 28.3573 179.563 28.9538 178.376 29.384C177.209 29.7947 175.816 30 174.198 30Z" fill="white"/>
+                  </svg>
+                  <!-- logo tokners -->
                 </div>
-                <!-- telegram -->
-                <div id="social_telegram" class="mx-1">
-                  <a href="#">
-                    <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <circle opacity="0.05" cx="25" cy="25" r="24" stroke="white" stroke-width="2"/>
-                      <path d="M22.8478 27.9848L22.517 32.6382C22.9903 32.6382 23.1953 32.4349 23.4412 32.1907L25.6604 30.0698L30.2588 33.4374C31.1022 33.9074 31.6964 33.6599 31.9239 32.6615L34.9423 18.5179L34.9431 18.517C35.2106 17.2703 34.4923 16.7828 33.6706 17.0887L15.9285 23.8813C14.7176 24.3513 14.736 25.0264 15.7227 25.3322L20.2586 26.7431L30.7947 20.1504C31.2905 19.8221 31.7414 20.0037 31.3705 20.3321L22.8478 27.9848Z" fill="white"/>
-                    </svg>
-                  </a>
+                <div id="social_media" class="col-12 col-lg-4 d-flex justify-content-center mb-4">
+                  <!-- twitter -->
+                  <div id="social_twitter" class="mx-1">
+                    <a href="#">
+                      <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle opacity="0.05" cx="25" cy="25" r="24" stroke="white" stroke-width="2"/>
+                        <path d="M34.1668 17.4996C33.3688 18.0625 32.4853 18.493 31.5502 18.7746C31.0483 18.1975 30.3813 17.7885 29.6394 17.6029C28.8974 17.4172 28.1164 17.4639 27.4019 17.7366C26.6874 18.0093 26.0739 18.4949 25.6443 19.1277C25.2148 19.7605 24.9899 20.5099 25.0002 21.2746V22.1079C23.5357 22.1459 22.0846 21.8211 20.776 21.1625C19.4674 20.5038 18.3421 19.5318 17.5002 18.3329C17.5002 18.3329 14.1668 25.8329 21.6668 29.1663C19.9506 30.3312 17.9061 30.9154 15.8335 30.8329C23.3335 34.9996 32.5002 30.8329 32.5002 21.2496C32.4994 21.0175 32.4771 20.7859 32.4335 20.5579C33.284 19.7192 33.8842 18.6602 34.1668 17.4996V17.4996Z" fill="white"/>
+                      </svg>
+                    </a>
+                  </div>
+                  <!-- telegram -->
+                  <div id="social_telegram" class="mx-1">
+                    <a href="#">
+                      <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle opacity="0.05" cx="25" cy="25" r="24" stroke="white" stroke-width="2"/>
+                        <path d="M22.8478 27.9848L22.517 32.6382C22.9903 32.6382 23.1953 32.4349 23.4412 32.1907L25.6604 30.0698L30.2588 33.4374C31.1022 33.9074 31.6964 33.6599 31.9239 32.6615L34.9423 18.5179L34.9431 18.517C35.2106 17.2703 34.4923 16.7828 33.6706 17.0887L15.9285 23.8813C14.7176 24.3513 14.736 25.0264 15.7227 25.3322L20.2586 26.7431L30.7947 20.1504C31.2905 19.8221 31.7414 20.0037 31.3705 20.3321L22.8478 27.9848Z" fill="white"/>
+                      </svg>
+                    </a>
+                  </div>
+                  <!-- instagram -->
+                  <div id="social_instagram" class="mx-1">
+                    <a href="#">
+                      <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle opacity="0.05" cx="25" cy="25" r="24" stroke="white" stroke-width="2"/>
+                        <g clip-path="url(#clip0_646_908)">
+                            <path d="M29.1665 16.667H20.8332C18.532 16.667 16.6665 18.5325 16.6665 20.8337V29.167C16.6665 31.4682 18.532 33.3337 20.8332 33.3337H29.1665C31.4677 33.3337 33.3332 31.4682 33.3332 29.167V20.8337C33.3332 18.5325 31.4677 16.667 29.1665 16.667Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M28.3333 24.4753C28.4361 25.1688 28.3176 25.8771 27.9947 26.4994C27.6718 27.1218 27.1609 27.6264 26.5346 27.9416C25.9083 28.2569 25.1986 28.3666 24.5064 28.2552C23.8142 28.1438 23.1747 27.817 22.679 27.3212C22.1832 26.8254 21.8564 26.186 21.745 25.4938C21.6336 24.8015 21.7433 24.0918 22.0585 23.4656C22.3737 22.8393 22.8784 22.3284 23.5007 22.0055C24.1231 21.6825 24.8314 21.5641 25.5249 21.6669C26.2324 21.7718 26.8873 22.1015 27.393 22.6072C27.8987 23.1129 28.2283 23.7678 28.3333 24.4753Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M29.5835 20.417H29.5918" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_646_908">
+                                <rect width="20" height="20" fill="white" transform="translate(15 15)"/>
+                            </clipPath>
+                        </defs>
+                      </svg>
+                    </a>
+                  </div>
+                  <!-- medium -->
+                  <div id="social_medium" class="mx-1">
+                    <a href="#">
+                      <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle opacity="0.05" cx="25" cy="25" r="24" stroke="white" stroke-width="2"/>
+                        <g clip-path="url(#clip0_646_909)">
+                            <path d="M33.4042 18.9438L35 17.4172V17.083H29.4717L25.5317 26.8897L21.0492 17.083H15.2525V17.4172L17.1167 19.6613C17.2983 19.8272 17.3933 20.0697 17.3692 20.3138V29.133C17.4267 29.4505 17.3233 29.7772 17.1 30.008L15 32.553V32.883H20.9542V32.5488L18.8542 30.008C18.6267 29.7763 18.5192 29.4555 18.565 29.133V21.5047L23.7917 32.8872H24.3992L28.8933 21.5047V30.5722C28.8933 30.8113 28.8933 30.8605 28.7367 31.0172L27.12 32.5813V32.9163H34.9633V32.5822L33.405 31.0563C33.2683 30.953 33.1975 30.7797 33.2267 30.6113V19.3888C33.1975 19.2197 33.2675 19.0463 33.4042 18.9438V18.9438Z" fill="white"/>
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_646_909">
+                                <rect width="20" height="20" fill="white" transform="translate(15 15)"/>
+                            </clipPath>
+                        </defs>
+                      </svg>
+                    </a>
+                  </div>
+                  <!-- github -->
+                  <div id="social_github" class="mx-1">
+                    <a href="#">
+                      <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle opacity="0.05" cx="25" cy="25" r="24" stroke="white" stroke-width="2"/>
+                            <g clip-path="url(#clip0_646_910)">
+                                <path d="M25 15.417C19.475 15.417 15 19.817 15 25.2437C15 29.5862 17.865 33.2687 21.8375 34.567C22.3375 34.6595 22.5208 34.3553 22.5208 34.0945C22.5208 33.8612 22.5125 33.2428 22.5083 32.4237C19.7267 33.0162 19.14 31.1053 19.14 31.1053C18.685 29.9712 18.0275 29.6678 18.0275 29.6678C17.1217 29.0587 18.0975 29.0712 18.0975 29.0712C19.1017 29.1395 19.6292 30.0837 19.6292 30.0837C20.5208 31.5862 21.97 31.152 22.5417 30.9012C22.6317 30.2653 22.8892 29.8328 23.175 29.587C20.9542 29.3412 18.62 28.4962 18.62 24.7312C18.62 23.6587 19.0075 22.782 19.6492 22.0945C19.5367 21.8462 19.1992 20.847 19.7367 19.4937C19.7367 19.4937 20.5742 19.2303 22.4867 20.5012C23.2867 20.2828 24.1367 20.1745 24.9867 20.1695C25.8367 20.1745 26.6867 20.2828 27.4867 20.5012C29.3867 19.2303 30.2242 19.4937 30.2242 19.4937C30.7617 20.847 30.4242 21.8462 30.3242 22.0945C30.9617 22.782 31.3492 23.6587 31.3492 24.7312C31.3492 28.5062 29.0117 29.337 26.7867 29.5787C27.1367 29.8737 27.4617 30.4762 27.4617 31.397C27.4617 32.712 27.4492 33.7687 27.4492 34.0878C27.4492 34.3453 27.6242 34.6528 28.1367 34.5545C32.1375 33.2645 35 29.5795 35 25.2437C35 19.817 30.5225 15.417 25 15.417V15.417Z" fill="white"/>
+                            </g>
+                        <defs>
+                            <clipPath id="clip0_646_910">
+                                <rect width="20" height="20" fill="white" transform="translate(15 15)"/>
+                            </clipPath>
+                        </defs>
+                      </svg>
+                    </a>
+                  </div>
+                  <!-- reddit -->
+                  <div id="social_reddit" class="mx-1">
+                    <a href="#">
+                      <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle opacity="0.05" cx="25" cy="25" r="24" stroke="white" stroke-width="2"/>
+                        <g clip-path="url(#clip0_646_905)">
+                            <path d="M32.7708 22.757C32.1391 22.757 31.5833 23.0228 31.1741 23.437C29.67 22.3803 27.6416 21.7003 25.3941 21.6278L26.5616 16.2895L30.2791 17.1362C30.2791 18.0595 31.0208 18.8137 31.9308 18.8137C32.8583 18.8137 33.6041 18.0395 33.6041 17.1153C33.6041 16.1912 32.8633 15.417 31.9316 15.417C31.2825 15.417 30.7225 15.8145 30.4433 16.3578L26.3375 15.4345C26.1308 15.3787 25.9283 15.5287 25.8733 15.7387L24.5916 21.6237C22.3616 21.7178 20.355 22.397 18.8458 23.4545C18.4366 23.0228 17.8591 22.757 17.2275 22.757C14.8841 22.757 14.1166 25.9478 16.2625 27.0387C16.1866 27.3762 16.1525 27.7362 16.1525 28.0953C16.1525 31.6795 20.1316 34.5837 25.0175 34.5837C29.9241 34.5837 33.9033 31.6795 33.9033 28.0953C33.9033 27.7362 33.8658 27.3595 33.7733 27.0212C35.8758 25.9262 35.1016 22.7587 32.7708 22.757V22.757ZM19.6675 27.2653C19.6675 26.3245 20.4091 25.567 21.3408 25.567C22.2508 25.567 22.9933 26.3195 22.9933 27.2653C22.9933 28.1895 22.2516 28.9428 21.3408 28.9428C20.4133 28.947 19.6675 28.1895 19.6675 27.2653V27.2653ZM28.7 31.2637C27.1658 32.8203 22.8366 32.8203 21.3016 31.2637C21.1325 31.1137 21.1325 30.8487 21.3016 30.6778C21.4491 30.5278 21.7108 30.5278 21.8583 30.6778C23.03 31.897 26.9166 31.9178 28.1391 30.6778C28.2866 30.5278 28.5483 30.5278 28.6958 30.6778C28.8683 30.8495 28.8683 31.1145 28.7 31.2637V31.2637ZM28.6658 28.9462C27.7558 28.9462 27.0141 28.1937 27.0141 27.2703C27.0141 26.3295 27.7558 25.572 28.6658 25.572C29.5933 25.572 30.3391 26.3245 30.3391 27.2703C30.335 28.1895 29.5933 28.9462 28.6658 28.9462Z" fill="white"/>
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_646_905">
+                                <rect width="20" height="20" fill="white" transform="translate(15 15)"/>
+                            </clipPath>
+                        </defs>
+                      </svg>
+                    </a>
+                  </div>
                 </div>
-                <!-- instagram -->
-                <div id="social_instagram" class="mx-1">
-                  <a href="#">
-                    <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <circle opacity="0.05" cx="25" cy="25" r="24" stroke="white" stroke-width="2"/>
-                      <g clip-path="url(#clip0_646_908)">
-                          <path d="M29.1665 16.667H20.8332C18.532 16.667 16.6665 18.5325 16.6665 20.8337V29.167C16.6665 31.4682 18.532 33.3337 20.8332 33.3337H29.1665C31.4677 33.3337 33.3332 31.4682 33.3332 29.167V20.8337C33.3332 18.5325 31.4677 16.667 29.1665 16.667Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                          <path d="M28.3333 24.4753C28.4361 25.1688 28.3176 25.8771 27.9947 26.4994C27.6718 27.1218 27.1609 27.6264 26.5346 27.9416C25.9083 28.2569 25.1986 28.3666 24.5064 28.2552C23.8142 28.1438 23.1747 27.817 22.679 27.3212C22.1832 26.8254 21.8564 26.186 21.745 25.4938C21.6336 24.8015 21.7433 24.0918 22.0585 23.4656C22.3737 22.8393 22.8784 22.3284 23.5007 22.0055C24.1231 21.6825 24.8314 21.5641 25.5249 21.6669C26.2324 21.7718 26.8873 22.1015 27.393 22.6072C27.8987 23.1129 28.2283 23.7678 28.3333 24.4753Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                          <path d="M29.5835 20.417H29.5918" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                      </g>
-                      <defs>
-                          <clipPath id="clip0_646_908">
-                              <rect width="20" height="20" fill="white" transform="translate(15 15)"/>
-                          </clipPath>
-                      </defs>
-                    </svg>
-                  </a>
+                <div id="copyright" class="col-12 col-lg-4 d-flex justify-content-center justify-content-lg-end align-items-center mb-lg-4">
+                  <span>&copy; 2022 Tokners. All rights reserved.</span>
                 </div>
-                <!-- medium -->
-                <div id="social_medium" class="mx-1">
-                  <a href="#">
-                    <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <circle opacity="0.05" cx="25" cy="25" r="24" stroke="white" stroke-width="2"/>
-                      <g clip-path="url(#clip0_646_909)">
-                          <path d="M33.4042 18.9438L35 17.4172V17.083H29.4717L25.5317 26.8897L21.0492 17.083H15.2525V17.4172L17.1167 19.6613C17.2983 19.8272 17.3933 20.0697 17.3692 20.3138V29.133C17.4267 29.4505 17.3233 29.7772 17.1 30.008L15 32.553V32.883H20.9542V32.5488L18.8542 30.008C18.6267 29.7763 18.5192 29.4555 18.565 29.133V21.5047L23.7917 32.8872H24.3992L28.8933 21.5047V30.5722C28.8933 30.8113 28.8933 30.8605 28.7367 31.0172L27.12 32.5813V32.9163H34.9633V32.5822L33.405 31.0563C33.2683 30.953 33.1975 30.7797 33.2267 30.6113V19.3888C33.1975 19.2197 33.2675 19.0463 33.4042 18.9438V18.9438Z" fill="white"/>
-                      </g>
-                      <defs>
-                          <clipPath id="clip0_646_909">
-                              <rect width="20" height="20" fill="white" transform="translate(15 15)"/>
-                          </clipPath>
-                      </defs>
-                    </svg>
-                  </a>
-                </div>
-                <!-- github -->
-                <div id="social_github" class="mx-1">
-                  <a href="#">
-                    <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <circle opacity="0.05" cx="25" cy="25" r="24" stroke="white" stroke-width="2"/>
-                          <g clip-path="url(#clip0_646_910)">
-                              <path d="M25 15.417C19.475 15.417 15 19.817 15 25.2437C15 29.5862 17.865 33.2687 21.8375 34.567C22.3375 34.6595 22.5208 34.3553 22.5208 34.0945C22.5208 33.8612 22.5125 33.2428 22.5083 32.4237C19.7267 33.0162 19.14 31.1053 19.14 31.1053C18.685 29.9712 18.0275 29.6678 18.0275 29.6678C17.1217 29.0587 18.0975 29.0712 18.0975 29.0712C19.1017 29.1395 19.6292 30.0837 19.6292 30.0837C20.5208 31.5862 21.97 31.152 22.5417 30.9012C22.6317 30.2653 22.8892 29.8328 23.175 29.587C20.9542 29.3412 18.62 28.4962 18.62 24.7312C18.62 23.6587 19.0075 22.782 19.6492 22.0945C19.5367 21.8462 19.1992 20.847 19.7367 19.4937C19.7367 19.4937 20.5742 19.2303 22.4867 20.5012C23.2867 20.2828 24.1367 20.1745 24.9867 20.1695C25.8367 20.1745 26.6867 20.2828 27.4867 20.5012C29.3867 19.2303 30.2242 19.4937 30.2242 19.4937C30.7617 20.847 30.4242 21.8462 30.3242 22.0945C30.9617 22.782 31.3492 23.6587 31.3492 24.7312C31.3492 28.5062 29.0117 29.337 26.7867 29.5787C27.1367 29.8737 27.4617 30.4762 27.4617 31.397C27.4617 32.712 27.4492 33.7687 27.4492 34.0878C27.4492 34.3453 27.6242 34.6528 28.1367 34.5545C32.1375 33.2645 35 29.5795 35 25.2437C35 19.817 30.5225 15.417 25 15.417V15.417Z" fill="white"/>
-                          </g>
-                      <defs>
-                          <clipPath id="clip0_646_910">
-                              <rect width="20" height="20" fill="white" transform="translate(15 15)"/>
-                          </clipPath>
-                      </defs>
-                    </svg>
-                  </a>
-                </div>
-                <!-- reddit -->
-                <div id="social_reddit" class="mx-1">
-                  <a href="#">
-                    <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <circle opacity="0.05" cx="25" cy="25" r="24" stroke="white" stroke-width="2"/>
-                      <g clip-path="url(#clip0_646_905)">
-                          <path d="M32.7708 22.757C32.1391 22.757 31.5833 23.0228 31.1741 23.437C29.67 22.3803 27.6416 21.7003 25.3941 21.6278L26.5616 16.2895L30.2791 17.1362C30.2791 18.0595 31.0208 18.8137 31.9308 18.8137C32.8583 18.8137 33.6041 18.0395 33.6041 17.1153C33.6041 16.1912 32.8633 15.417 31.9316 15.417C31.2825 15.417 30.7225 15.8145 30.4433 16.3578L26.3375 15.4345C26.1308 15.3787 25.9283 15.5287 25.8733 15.7387L24.5916 21.6237C22.3616 21.7178 20.355 22.397 18.8458 23.4545C18.4366 23.0228 17.8591 22.757 17.2275 22.757C14.8841 22.757 14.1166 25.9478 16.2625 27.0387C16.1866 27.3762 16.1525 27.7362 16.1525 28.0953C16.1525 31.6795 20.1316 34.5837 25.0175 34.5837C29.9241 34.5837 33.9033 31.6795 33.9033 28.0953C33.9033 27.7362 33.8658 27.3595 33.7733 27.0212C35.8758 25.9262 35.1016 22.7587 32.7708 22.757V22.757ZM19.6675 27.2653C19.6675 26.3245 20.4091 25.567 21.3408 25.567C22.2508 25.567 22.9933 26.3195 22.9933 27.2653C22.9933 28.1895 22.2516 28.9428 21.3408 28.9428C20.4133 28.947 19.6675 28.1895 19.6675 27.2653V27.2653ZM28.7 31.2637C27.1658 32.8203 22.8366 32.8203 21.3016 31.2637C21.1325 31.1137 21.1325 30.8487 21.3016 30.6778C21.4491 30.5278 21.7108 30.5278 21.8583 30.6778C23.03 31.897 26.9166 31.9178 28.1391 30.6778C28.2866 30.5278 28.5483 30.5278 28.6958 30.6778C28.8683 30.8495 28.8683 31.1145 28.7 31.2637V31.2637ZM28.6658 28.9462C27.7558 28.9462 27.0141 28.1937 27.0141 27.2703C27.0141 26.3295 27.7558 25.572 28.6658 25.572C29.5933 25.572 30.3391 26.3245 30.3391 27.2703C30.335 28.1895 29.5933 28.9462 28.6658 28.9462Z" fill="white"/>
-                      </g>
-                      <defs>
-                          <clipPath id="clip0_646_905">
-                              <rect width="20" height="20" fill="white" transform="translate(15 15)"/>
-                          </clipPath>
-                      </defs>
-                    </svg>
-                  </a>
-                </div>
-              </div>
-              <div id="copyright" class="col-4 d-flex justify-content-end">
-                <span>&copy; 2022 Tokners. All rights reserved.</span>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
 
   </div>
 

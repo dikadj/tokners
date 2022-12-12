@@ -255,6 +255,7 @@ textarea {
     --dark: #0F1320;
     --less-dark: #171B29;
     --white: #ffffff;
+    --less-white: #9FA1A6;
     --dimmed-white: #595976;
     --lighter-white: #425376;
     --lighter-white-2: #DDE2FF;
@@ -278,7 +279,8 @@ html, body {
 #hero {
   /* box-sizing: content-box; */
   background-color: var(--dark)!important; 
-  background: bottom right / contain url("../img/geometry-bg.png") no-repeat, top right / contain url("../img/purplish-gradient.png") no-repeat;
+  /* background: bottom -40% right 30% / 160% url("../img/phones.png") no-repeat; */
+  background: bottom right / contain url("../img/geometry-bg-sm.png") no-repeat, top right / contain url("../img/purplish-gradient.png") no-repeat;
 }
 
 /*
@@ -374,39 +376,22 @@ nav button, nav button:active, nav button:focus {
   opacity: 0.6;
 }
 
-
-/* For Larger Screen */
-@media (min-width: 992px) {
-
-  #hero {
-    background: bottom right / 60% url("../img/geometry-bg.png") no-repeat, top right / 90% url("../img/purplish-gradient-lg.png") no-repeat;
-  }
-
-  .hero_sub {
-    font-size: 16px!important;
-  }
-
-  #hero h1 {
-    font-size: 48px!important;
-  }
-
-  #hero h1.fs73 {
-    font-size: 73px!important;
-  }
-
-  #hero p {
-    font-size: 16px!important;
-  }
-
-  #color_year_carousel h1 {
-    font-family: "Century Gothic Bold"!important;
-    font-size: 64px!important;
-  }
-  
-
+#hero_gadget_carousel_wrapper {
+  bottom: 0;
 }
 
 /* Slick */
+
+.slick-dots {
+  visibility: hidden; /* hide on small viewport */
+}
+
+#presale_details .slick-dots {
+  visibility: visible;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
 
 .slick-dots span.dot_hollow {
   font-size: 6px!important;
@@ -436,6 +421,12 @@ nav button, nav button:active, nav button:focus {
   opacity: 0;
   transition: opacity 500ms ease-out;
 }
+
+#presale_details .slick-slide {
+  transition: none;
+  opacity: 1;
+}
+
 .slick-slide.slick-current {
   opacity: 1;
 }
@@ -450,10 +441,11 @@ nav button, nav button:active, nav button:focus {
   visibility: visible;
 } */
 
-
-#color_year_carousel {
-  background: center center / 96% url("../img/thread2.svg") no-repeat;
+#color_year_carousel_header h1 {
+  font-family: "Century Gothic Bold"!important;
+  font-size: 28px!important;
 }
+
 
 #for_creators, #for_holders {
   background: var(--less-dark); 
@@ -461,7 +453,7 @@ nav button, nav button:active, nav button:focus {
 }
 
 #for_holders {
-  transform: translateY(90px);
+  /* transform: translateY(90px); */
 }
 
 #for_creators span {
@@ -483,6 +475,11 @@ nav button, nav button:active, nav button:focus {
   color: rgba(255,255,255,.5);
 }
 
+#for_creators a, #for_holders a {
+  font-family: "Century Gothic Bold"!important;
+  font-size: 14px!important;
+}
+
 #for_creators svg {
   filter: drop-shadow(0 15px 25px rgb(34 167 93 / .25));
 }
@@ -492,33 +489,30 @@ nav button, nav button:active, nav button:focus {
 }
 
 #makes_different_decor {
-  background: right / cover url("../img/colorful-shapes.jpg") no-repeat;
-  border-radius: 0 400px 0 0; 
-  height: 800px;
+  background: right / cover url("../img/colorful-shapes-flip-hor.jpg") no-repeat;
+  border-radius: 150px 0 0 0; 
+  height: 300px;
 }
 
 #makes_different_text {
-  background: left / cover url("../img/weentar.svg") no-repeat, var(--white); 
-  border-radius: 400px 0 0 0; 
-  height: 800px;
+  background: var(--white);
+  border-radius: 0 150px 0 0; 
 }
 
 #makes_different_text h1 {
   font-family: "Century Gothic Bold"!important;
-  font-size: 48px;
+  font-size: 36px;
   color: var(--dark)!important;
-}
-
-#makes_different_text p.sub_headline {
-  font-family: "Century Gothic Bold"!important;
-  font-size: 16px;
-  color: rgba(15, 19, 32, .6)!important;
 }
 
 #makes_different_text p {
   font-family: "Century Gothic Regular"!important;
-  font-size: 16px;
+  font-size: 14px;
   color: rgba(15, 19, 32, .6)!important;
+}
+
+#makes_different_text p.sub_headline {
+  font-family: "Century Gothic Bold"!important;
 }
 
 #quartals {
@@ -527,11 +521,6 @@ nav button, nav button:active, nav button:focus {
 
 #quartals #quartals_bg_layer {
   background-color: var(--dark);
-  border-radius: 0 250px 0 0;
-}
-
-#quartals .quartals_wrapper {
-  margin: 210px 0;
 }
 
 #quartals #q1 svg {
@@ -552,7 +541,7 @@ nav button, nav button:active, nav button:focus {
 
 #quartals h4 {
   font-family: "Century Gothic Bold"!important;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 #quartals ol {
@@ -608,22 +597,29 @@ nav button, nav button:active, nav button:focus {
 
 #tokners_coming h1 {
   font-family: "Century Gothic Bold"!important;
-  font-size: 48px!important;
+  font-size: 36px!important;
+}
+
+#tokners_coming_p {
+  height: 400px; 
+  overflow-y: hidden;
 }
 
 #tokners_coming p {
   font-family: "Century Gothic Regular"!important;
-  font-size: 16px!important;
-  opacity: 0.6;
+  font-size: 14px!important;
+  color: rgba(255,255,255,.5);
+  /* color: var(--white);
+  opacity: 0.6; */
+  /* color: var(--less-white); */
 }
 
 #tokners_coming p.sub_headline {
   font-family: "Century Gothic Bold"!important;
-  opacity: 1;
-}
-
-#tokners_coming .tokners_coming_wrapper {
-  margin-bottom: 210px;
+  color: rgba(255,255,255,.6);
+  /* color: var(--white);
+  opacity: .6; */
+  /* color: var(--less-white); */
 }
 
 #tokners_coming svg.tokners_logo {
@@ -631,24 +627,28 @@ nav button, nav button:active, nav button:focus {
 }
 
 #tokners_coming #tokners_coming_illust {
-  background: var(--less-dark); 
-  clip-path: inset(0 0 0 15% round 25px);
+  /* background: var(--less-dark); 
+  clip-path: inset(0 0 0 15% round 25px); */
+}
+
+.read_more_overlay {
+  background: linear-gradient(to top, rgba(15, 19, 32, 1), rgba(15, 19, 32, 0));
+}
+
+#read_more_coming, #read_less_coming {
+  font-family: "Century Gothic Bold"!important;
+  font-size: 18px!important;
+  color: var(--green);
+  text-decoration-style: dotted;
 }
 
 #presale_details {
-  background: center / contain url("../img/triangles-clipped.svg") no-repeat;
-  z-index: 9996;
-  transform: translateY(-20%);
-  /* margin-bottom: -20%; */
-}
-
-#presale_details #presale_details_content {
-  transform: translateY(20%); /* back to natural position */
+  background: center / contain url("../img/triangles-clipped-sm.svg") no-repeat;
 }
 
 #presale_details h1 {
   font-family: "Century Gothic Bold"!important;
-  font-size: 48px!important;
+  font-size: 36px!important;
 }
 
 #presale_details h3 {
@@ -683,8 +683,12 @@ nav button, nav button:active, nav button:focus {
   filter: drop-shadow(0 15px 25px rgb(255 209 0 / .25));
 }
 
+#presale_details .presale_details_wrapper {
+
+}
+
 #how_to_buy #buy_step_1, #how_to_buy #buy_step_2, #how_to_buy #buy_step_3 {
-  padding: 100px 0; 
+  padding: 70px 0;
   border-radius: 25px; 
   clip-path: inset(0.5rem round 25px); 
   background: var(--less-dark);
@@ -700,25 +704,18 @@ nav button, nav button:active, nav button:focus {
   font-size: 18px!important;
 }
 
-#how_to_buy #how_to_buy_numbering span {
+#how_to_buy #how_to_buy_numbering span, #how_to_buy .htb_num {
   font-family: "Century Gothic Bold"!important;
   font-size: 12px!important;
   color: rgba(255, 255, 255, .3);
 }
 
-#footer {
-  margin-top: 210px;
+.chevron_bridge.chev1 {
+  transform: translateY(100%) rotate(90deg);
 }
 
-#footer #footer_nav a {
-  font-family: "Century Gothic Bold"!important;
-  font-size: 16px!important;
-  color: var(--white);
-  transition: color 300ms ease-out;
-}
-
-#footer #footer_nav a:hover, #footer #footer_nav a:active, #footer #footer_nav a:focus {
-  color: var(--blue);
+.chevron_bridge.chev2 {
+  transform: translateY(-100%) rotate(90deg);
 }
 
 #footer #copyright {
@@ -729,3 +726,171 @@ nav button, nav button:active, nav button:focus {
 #social_media a:hover circle, #social_media a:active circle, #social_media a:focus circle {
   fill: var(--white);
 }
+
+
+
+
+/* For Larger Screen */
+@media (min-width: 992px) {
+
+  /* Slick */
+  .slick-dots {
+    visibility: visible;
+  }  
+
+  #hero {
+    background: bottom right / 60% url("../img/geometry-bg.png") no-repeat, top right / 90% url("../img/purplish-gradient-lg.png") no-repeat;
+  }
+
+  .hero_sub {
+    font-size: 16px!important;
+  }
+
+  #hero h1 {
+    font-size: 48px!important;
+  }
+
+  #hero h1.fs73 {
+    font-size: 73px!important;
+  }
+
+  #hero p {
+    font-size: 16px!important;
+  }
+
+  #hero_gadget_carousel_wrapper {
+    right: 0; 
+    /* top: -25%; */
+    transform: translateY(25%);
+  }
+    
+  #for_holders {
+    transform: translateY(90px);
+  }
+  
+
+  #color_year_carousel_header h1 {
+    font-size: 64px!important;
+  }
+  
+  #color_year_carousel_header {
+    background: center center / 96% url("../img/thread2.svg") no-repeat;
+  }
+
+  #makes_different_decor {
+    background: right / cover url("../img/colorful-shapes.jpg") no-repeat;
+    border-radius: 0 400px 0 0; 
+    height: 800px;
+  }
+
+  #makes_different_text {
+    background: left / cover url("../img/weentar.svg") no-repeat, var(--white); 
+    border-radius: 400px 0 0 0; 
+    /* height: 800px; */
+  }
+
+  #makes_different_text h1 {
+    font-size: 48px;
+  }
+
+  #makes_different_text p {
+    font-size: 16px;
+  }
+
+  #makes_different_text div {
+    transform: translateY(16px); 
+    margin-bottom: 16px;
+  }
+
+  #quartals #quartals_bg_layer {
+    border-radius: 0 250px 0 0;
+  }  
+  
+  #quartals .quartals_wrapper {
+    margin: 210px 0;
+  }
+
+  #tokners_coming h1 {
+    font-size: 48px!important;
+  }
+  
+  #tokners_coming p {
+    font-size: 16px!important;
+  }
+
+  #tokners_coming .tokners_coming_wrapper {
+    margin-bottom: 210px;
+  }  
+
+  #presale_details h1 {
+    font-size: 48px!important;
+  }
+  
+  #presale_details #presale_details_content {
+    position: absolute;
+  }
+
+  #presale_details #phase_two {
+    transform: translateY(60px);
+  }
+
+  #presale_details .presale_details_wrapper {
+    background: none;
+  }  
+
+  #presale_details {
+    background: center / contain url("../img/triangles-clipped.svg") no-repeat;
+    z-index: 9996;
+    transform: translateY(-20%);
+    /* margin-bottom: -20%; */
+  }
+    
+  #presale_details #presale_details_content {
+    transform: translateY(20%); /* back to natural position */
+  }
+
+  #how_to_buy #buy_step_2 {
+    transform: translateY(60px);
+  }
+
+  .chevron_bridge.chev1 {
+    transform: translateY(0) rotate(0);
+  }
+  
+  .chevron_bridge.chev2 {
+    transform: translateY(0) rotate(0);
+  }
+  
+  #how_to_buy #buy_step_1, #how_to_buy #buy_step_2, #how_to_buy #buy_step_3 {
+    padding: 100px 0; 
+  }  
+
+
+  #footer {
+    margin-top: 210px;
+  }
+
+  #footer #footer_nav a {
+    font-family: "Century Gothic Bold"!important;
+    font-size: 16px!important;
+    color: var(--white);
+    transition: color 300ms ease-out;
+  }
+
+  #footer #footer_nav a:hover, #footer #footer_nav a:active, #footer #footer_nav a:focus {
+    color: var(--blue);
+  }
+
+  #footer_wrapper {
+    background: bottom right / contain url("../img/purplish-gradient-footer.png") no-repeat;
+  }
+}
+
+
+@media (min-width: 1400px) {
+
+  #tokners_coming_p {
+    height: auto; 
+  }
+
+} 

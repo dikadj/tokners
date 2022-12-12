@@ -39,7 +39,7 @@ $(document).ready(function() {
 
         // Enabling Slick JS
         $(".hero_carousel").slick({
-            autoplay: true,
+            autoplay: $(window).width() >= 992, // play on large viewport
             speed: 500,
             arrows: false,
             fade: true,
@@ -55,10 +55,10 @@ $(document).ready(function() {
             // infinite: false,
         })    
         $(".hero_gadget_carousel").slick({
-            autoplay: true,
-            speed: 500,
+            autoplay: false,
+            speed: ($(window).width() >= 992) ? 500 : 1,
             arrows: false,
-            // fade: true,
+            fade: $(window).width() < 992,
             // easing: "swing",
             // rtl: true,
             dots: true,
@@ -69,8 +69,58 @@ $(document).ready(function() {
             pauseOnHover: false,
             pauseOnDotsHover: false,
             // infinite: false,
-            autoplay: false
-        })    
+        })
+        if ($(window).width() < 992) {
+            $("#presale_details #phases").slick({
+                autoplay: false,
+                // speed: 500,
+                arrows: false,
+                // fade: true,
+                // easing: "swing",
+                // rtl: true,
+                dots: true,
+                appendDots: "#presale_details #phases",
+                // centerMode: true,
+                // draggable: true,
+                pauseOnFocus: false,
+                pauseOnHover: false,
+                pauseOnDotsHover: false,
+                infinite: false,
+            })
+        }
+        $("#color_year_carousel #color_year_bg_carousel, #color_year_carousel #color_year_text_carousel, #color_year_carousel #color_year_number_carousel").slick({
+            autoplay: true,
+            speed: 500,
+            arrows: false,
+            fade: true,
+            // easing: "swing",
+            // rtl: true,
+            // dots: true,
+            // appendDots: "#presale_details #phases",
+            // centerMode: true,
+            // draggable: true,
+            pauseOnFocus: false,
+            pauseOnHover: false,
+            pauseOnDotsHover: false,
+            infinite: true,
+        })
+        // $("#color_year_carousel #color_year_text_carousel").slick({
+        //     autoplay: true,
+        //     speed: 500,
+        //     arrows: false,
+        //     fade: true,
+        //     // easing: "swing",
+        //     // rtl: true,
+        //     // dots: true,
+        //     // appendDots: "#presale_details #phases",
+        //     // centerMode: true,
+        //     // draggable: true,
+        //     pauseOnFocus: false,
+        //     pauseOnHover: false,
+        //     pauseOnDotsHover: false,
+        //     infinite: false,
+        // })
+
             
     //     // Carousel Dots
         
@@ -115,15 +165,35 @@ $(document).ready(function() {
 
         // shift #presale_details' content to natural position
         const presaleDetailsHeight = $("#presale_details").height()
-        $("#presale_details #presale_details_content").css({
-            "transform": `translateY(${presaleDetailsHeight/5}px)`, // down 20%
-            "top": `${presaleDetailsHeight/5}px`
-        }) 
-        $("#presale_details").css({
-            "margin-bottom": `-${presaleDetailsHeight/5}px`,
+
+        if ($(window).width() > 992) {
+            $("#presale_details #presale_details_content").css({
+                "transform": `translateY(${presaleDetailsHeight/5}px)`, // down 20%
+                "top": `${presaleDetailsHeight/5}px`
+            }) 
+            $("#presale_details").css({
+                "margin-bottom": `-${presaleDetailsHeight/5}px`,
+            })
+            $("#how_to_buy").css("margin-top", `${presaleDetailsHeight/5}px`)
+            
+        }
+
+        $("#tokners_coming #read_more_coming").on("click", () => {
+            $("#tokners_coming #tokners_coming_p").css("height", "auto")
+            $("#tokners_coming #read_more_coming").toggleClass("d-none")
+            $("#tokners_coming #read_less_coming").toggleClass("d-none")
+            $("#tokners_coming .read_more_overlay").toggleClass("d-none")
         })
-        $("#how_to_buy").css("margin-top", `${presaleDetailsHeight/5}px`)
+
+        $("#tokners_coming #read_less_coming").on("click", () => {
+            $("#tokners_coming #tokners_coming_p").css("height", "400px")
+            $("#tokners_coming #read_less_coming").toggleClass("d-none")
+            $("#tokners_coming #read_more_coming").toggleClass("d-none")
+            $("#tokners_coming .read_more_overlay").toggleClass("d-none")
+        })
+
     }
+
     cb() // call once
     $(window).resize(function() {
         cb() // call on resize window
