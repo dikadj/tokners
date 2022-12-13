@@ -89,7 +89,7 @@ $(document).ready(function() {
             })
         }
         $("#color_year_carousel #color_year_bg_carousel, #color_year_carousel #color_year_text_carousel, #color_year_carousel #color_year_number_carousel").slick({
-            autoplay: true,
+            autoplay: $(window).width() > 992,
             speed: 500,
             arrows: false,
             fade: true,

@@ -306,6 +306,10 @@ nav ul li, nav button {
   transform: translateY(-36px);
 }
 
+#small_social_media svg:hover circle {
+  fill: var(--white);
+}
+
 
 nav #side_menu {
   /* Center vertically */
@@ -452,8 +456,7 @@ nav button, nav button:active, nav button:focus {
 #color_year_carousel h3 {
   font-family: "Century Gothic Bold"!important;
   font-size: 32px!important;
-  border-left: 2px solid ;
-  border-color: var(--pink);
+  border: none;
 }
 
 #color_year_carousel p {
@@ -842,6 +845,12 @@ nav button, nav button:active, nav button:focus {
     height: 100vh!important;
     background: center center / 96% url("../img/thread2.svg") no-repeat;
   }
+
+  #color_year_carousel h3 {
+    border-left: 2px solid ;
+    border-color: var(--pink);
+  }  
+
 
   #makes_different_decor {
     background: right / cover url("../img/colorful-shapes.jpg") no-repeat;
