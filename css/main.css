@@ -365,6 +365,10 @@ nav button, nav button:active, nav button:focus {
   box-shadow: 0 15px 25px 0 var(--green-opac-25);
 }
 
+#color_year_arrow button:hover {
+  background: var(--yellow);
+}
+
 /* Hero */
 
 .hero_sub {
@@ -493,6 +497,10 @@ nav button, nav button:active, nav button:focus {
 
 .slick-slide.slick-current {
   opacity: 1;
+}
+
+.slick-arrow {
+  visibility: hidden;
 }
 
 /* .slick-list {
@@ -795,6 +803,12 @@ nav button, nav button:active, nav button:focus {
   fill: var(--white);
 }
 
+#color_year_sm {
+  background: var(--bluish-dark);
+  color: var(--white);
+  border: none;
+  padding: 1rem;
+}
 
 
 

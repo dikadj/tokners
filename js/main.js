@@ -91,7 +91,7 @@ $(document).ready(function() {
         $("#color_year_carousel #color_year_bg_carousel, #color_year_carousel #color_year_text_carousel, #color_year_carousel #color_year_number_carousel").slick({
             autoplay: $(window).width() > 992,
             speed: 500,
-            arrows: false,
+            arrows: $(window).width() < 992,
             fade: true,
             // easing: "swing",
             // rtl: true,
@@ -145,6 +145,31 @@ $(document).ready(function() {
 
         $("#color_year_carousel .slick-dots").addClass("d-none")
 
+
+        $("#color_year_sm").on("change", (e) => { 
+            if (e.target.value === "2022") {
+                $($("#color_year_carousel .slick-dots li, #color_year_carousel_indicator button")[0]).trigger("click")
+            } else if (e.target.value === "2022") {
+                $($("#color_year_carousel .slick-dots li, #color_year_carousel_indicator button")[1]).trigger("click")
+            } else if (e.target.value === "2022") {
+                $($("#color_year_carousel .slick-dots li, #color_year_carousel_indicator button")[2]).trigger("click")
+            } else if (e.target.value === "2022") {
+                $($("#color_year_carousel .slick-dots li, #color_year_carousel_indicator button")[3]).trigger("click")
+            } else {
+                $($("#color_year_carousel .slick-dots li, #color_year_carousel_indicator button")[4]).trigger("click")
+            }
+        })
+
+        $("#color_year_arrow button:first-of-type").on("click", (e) => {
+            if (parseInt($("#color_year_sm").val()) <= 2022 && parseInt($("#color_year_sm").val()) > 2018) {
+                $("#color_year_sm").val(parseInt($("#color_year_sm").val()) - 1).trigger("change")
+            }
+        })
+        $("#color_year_arrow button:last-of-type").on("click", (e) => {
+            if (parseInt($("#color_year_sm").val()) < 2022 && parseInt($("#color_year_sm").val()) >= 2018) {
+                $("#color_year_sm").val(parseInt($("#color_year_sm").val()) + 1).trigger("change")
+            }
+        })
 
         
         // Helper function to detect change in an element
@@ -226,6 +251,13 @@ $(document).ready(function() {
             $("#tokners_coming #read_less_coming").toggleClass("d-none")
             $("#tokners_coming #read_more_coming").toggleClass("d-none")
             $("#tokners_coming .read_more_overlay").toggleClass("d-none")
+        })
+
+        $("#color_year_arrow button:first-of-type").on("click", () => {
+            $(".slick-arrow.slick-prev").trigger("click")
+        })
+        $("#color_year_arrow button:last-of-type").on("click", () => {
+            $(".slick-arrow.slick-next").trigger("click")
         })
 
     }
