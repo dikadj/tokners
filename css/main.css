@@ -254,6 +254,7 @@ textarea {
    :root {
     --dark: #0F1320;
     --less-dark: #171B29;
+    --bluish-dark: #06080E;
     --white: #ffffff;
     --less-white: #9FA1A6;
     --dimmed-white: #595976;
@@ -264,6 +265,7 @@ textarea {
     --blue: #2278D4;
     --yellow: #FFD100;
     --red: #E20613;
+    --pink: #F1B2CC
   }
  
 
@@ -348,6 +350,13 @@ nav button, nav button:active, nav button:focus {
   box-shadow: 0 15px 25px 0 var(--green-opac-25);
 }
 
+.btn_rounded_outline_yellow_active {
+  border: solid 1px var(--green)!important;
+  padding: 0.7rem 3rem!important;
+  background: var(--yellow)!important;
+  box-shadow: 0 15px 25px 0 var(--green-opac-25);
+}
+
 /* Hero */
 
 .hero_sub {
@@ -413,6 +422,54 @@ nav button, nav button:active, nav button:focus {
   visibility: hidden;
 }
 
+#color_year_carousel_indicator button:hover .point_line {
+  visibility: visible!important;
+}
+
+@keyframes show-point-line {
+  0% { clip-path: inset(0 99% 0 0); }
+  100% { clip-path: inset(0 0% 0 0); }
+}
+
+#color_year_carousel_indicator button .point_line_body {
+  clip-path: inset(100%);
+}
+
+#color_year_carousel_indicator button:hover .point_line_body, #color_year_carousel_indicator button:focus .point_line_body, #color_year_carousel_indicator button:active .point_line_body {
+  animation: 500ms ease-out show-point-line;
+  clip-path: inset(0 0% 0 0);
+}
+
+#color_year_carousel_indicator span {
+  font-family: "Century Gothic Bold"!important;
+  font-size: 18px!important;
+}
+
+#color_year_carousel h3 {
+  font-family: "Century Gothic Bold"!important;
+  font-size: 32px!important;
+  border-left: 2px solid ;
+  border-color: var(--pink);
+}
+
+#color_year_carousel p {
+  font-family: "Century Gothic Regular"!important;
+  font-size: 18px!important;
+  color: rgba(255,255,255,.6);
+}
+
+
+#color_year_number_carousel span.cy_num {
+  background: var(--bluish-dark);
+  width: 400px;
+  font-family: "Century Gothic Bold"!important;
+  font-size: 200px!important;
+}
+#color_year_number_carousel span.cy_num_sub {
+  font-family: "Century Gothic Bold"!important;
+  font-size: 24px!important;
+}
+
 .slick-list {
   overflow: visible;
 }
@@ -441,9 +498,13 @@ nav button, nav button:active, nav button:focus {
   visibility: visible;
 } */
 
+#color_year_carousel_header {
+  height: 75vh!important;
+}
+
 #color_year_carousel_header h1 {
   font-family: "Century Gothic Bold"!important;
-  font-size: 28px!important;
+  font-size: 40px!important;
 }
 
 
@@ -771,9 +832,10 @@ nav button, nav button:active, nav button:focus {
 
   #color_year_carousel_header h1 {
     font-size: 64px!important;
-  }
+  }  
   
   #color_year_carousel_header {
+    height: 100vh!important;
     background: center center / 96% url("../img/thread2.svg") no-repeat;
   }
 

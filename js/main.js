@@ -95,8 +95,8 @@ $(document).ready(function() {
             fade: true,
             // easing: "swing",
             // rtl: true,
-            // dots: true,
-            // appendDots: "#presale_details #phases",
+            dots: true,
+            // appendDots: "#color_year_carousel #color_year_bg_carousel",
             // centerMode: true,
             // draggable: true,
             pauseOnFocus: false,
@@ -137,31 +137,67 @@ $(document).ready(function() {
         
 
         $(".slick-dots li").addClass("list-unstyled d-flex align-items-center")
-        $(".slick-dots li:nth-child(2)").addClass("px-2")
+        $(".slick-dots li").addClass("mx-2")
         $(".slick-dots li").parent().addClass("d-flex px-0")
         $(".slick-dots li").html(`
             <span class="dot_hollow pt-1">&#9675;</span> <span class="dot_filled">&#9679;</span>
         `)
 
+        $("#color_year_carousel .slick-dots").addClass("d-none")
+
+
         
         // Helper function to detect change in an element
 
-        const config = { attributes: true, childList: false, subtree: false };
-        const observer = new MutationObserver( (mutationList, observer) => { 
+        const heroSlickDotsLiObserver = new MutationObserver( (mutationList, observer) => { 
             // callback here
             if (mutationList[0].target.classList.contains("slick-active")) {
-                $(".hero_carousel .slick-dots li:first-child").trigger("click") //.click()
+                $("#hero .hero_carousel .slick-dots li:first-child").trigger("click") //.click()
+                $("#hero .hero_carousel .slick-dots li:nth-child(3)").trigger("click") //.click()
             } else {
-                $(".hero_carousel .slick-dots li:nth-child(2)").trigger("click") //.click()
+                $("#hero .hero_carousel .slick-dots li:nth-child(2)").trigger("click") //.click()
+                $("#hero .hero_carousel .slick-dots li:nth-child(4)").trigger("click") //.click()
             }
         } );
         
-        observer.observe(
+        heroSlickDotsLiObserver.observe(
             $(".hero_carousel .slick-dots li")[0], 
             { attributes: true, childList: false, subtree: false }
         );
             
-        // observer.disconnect()
+        // heroSlickDotsLiObserver.disconnect()
+        
+        
+        
+        $("#color_year_carousel .slick-dots").each((i) => {
+            const colorYearCarouselSlickDotsObserver = new MutationObserver( (mutationList, observer) => { 
+                // callback here
+                $(mutationList[0].target.children).each((ii) => {
+                    // console.log(`${i}-${ii}`)
+                    // console.log($($("#color_year_carousel .slick-dots")[i]).children()[ii])
+                    $($($("#color_year_carousel .slick-dots")[i]).children()[ii]).on("click", () => {
+                        // console.log(`ul-${i+1} li-${ii+1}`)
+                        // $($($("#color_year_carousel .slick-dots li:first-child")[i]).children()[ii]).hasClass("slick-active")
+                        $($("#color_year_carousel .slick-dots li")[ii]).trigger("click")
+                        $($("#color_year_carousel .slick-dots li")[((ii+1)*2)-1]).trigger("click")
+                        $($("#color_year_carousel .slick-dots li")[((ii+1)*3)-1]).trigger("click")
+                        console.log($($("#color_year_carousel_indicator button")[ii]))
+                    })
+                    $($("#color_year_carousel_indicator button")[ii]).on("click", () => {
+                        $($("#color_year_carousel .slick-dots li")[ii]).trigger("click")
+                        $($("#color_year_carousel .slick-dots li")[((ii+1)*2)-1]).trigger("click")
+                        $($("#color_year_carousel .slick-dots li")[((ii+1)*3)-1]).trigger("click")
+                    })
+                })
+            } )
+            
+            colorYearCarouselSlickDotsObserver.observe(
+                $("#color_year_carousel .slick-dots")[i],
+                { attributes: true, childList: false, subtree: false }
+            )
+        })
+        // console.log($("#color_year_carousel .slick-dots"))
+
 
         // shift #presale_details' content to natural position
         const presaleDetailsHeight = $("#presale_details").height()
