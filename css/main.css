@@ -1,3 +1,4 @@
+
 /* ==========================================================================
    Fonts
    ========================================================================== */
@@ -167,6 +168,7 @@ textarea {
 
 @media print,
   (-webkit-min-device-pixel-ratio: 1.25),
+  (-o-min-device-pixel-ratio: 5/4),
   (min-resolution: 1.25dppx),
   (min-resolution: 120dpi) {
   /* Style adjustments for high resolution devices */
@@ -185,7 +187,8 @@ textarea {
     background: #fff !important;
     color: #000 !important;
     /* Black prints faster */
-    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+            box-shadow: none !important;
     text-shadow: none !important;
   }
 
@@ -303,7 +306,9 @@ nav ul li, nav button {
 }
 
 #side_menu_sm nav {
-  transform: translateY(-36px);
+  -webkit-transform: translateY(-36px);
+      -ms-transform: translateY(-36px);
+          transform: translateY(-36px);
 }
 
 #small_social_media svg:hover circle {
@@ -348,21 +353,24 @@ nav button, nav button:active, nav button:focus {
 
 .btn_rounded_outline:hover, .btn_rounded_outline:active, .btn_rounded_outline:focus {
   background: var(--green)!important;
-  box-shadow: 0 15px 25px 0 var(--green-opac-25);
+  -webkit-box-shadow: 0 15px 25px 0 var(--green-opac-25);
+          box-shadow: 0 15px 25px 0 var(--green-opac-25);
 }
 
 .btn_rounded_outline_active {
   border: solid 1px var(--green)!important;
   padding: 0.7rem 3rem!important;
   background: var(--green)!important;
-  box-shadow: 0 15px 25px 0 var(--green-opac-25);
+  -webkit-box-shadow: 0 15px 25px 0 var(--green-opac-25);
+          box-shadow: 0 15px 25px 0 var(--green-opac-25);
 }
 
 .btn_rounded_outline_yellow_active {
   border: solid 1px var(--green)!important;
   padding: 0.7rem 3rem!important;
   background: var(--yellow)!important;
-  box-shadow: 0 15px 25px 0 var(--green-opac-25);
+  -webkit-box-shadow: 0 15px 25px 0 var(--green-opac-25);
+          box-shadow: 0 15px 25px 0 var(--green-opac-25);
 }
 
 #color_year_arrow button:hover {
@@ -375,8 +383,8 @@ nav button, nav button:active, nav button:focus {
   font-family: "Century Gothic Bold"!important;
   font-size: 14px!important;
   background: rgb(43,48,135);
-  background: -moz-linear-gradient(0deg, rgba(43,48,135,1) 0%, rgba(0,180,236,1) 100%);
-  background: -webkit-linear-gradient(0deg, rgba(43,48,135,1) 0%, rgba(0,180,236,1) 100%);
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(43,48,135,1)), to(rgba(0,180,236,1)));
+  background: -o-linear-gradient(bottom, rgba(43,48,135,1) 0%, rgba(0,180,236,1) 100%);
   background: linear-gradient(0deg, rgba(43,48,135,1) 0%, rgba(0,180,236,1) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#2b3087",endColorstr="#00b4ec",GradientType=1);
   -webkit-background-clip: text;
@@ -409,9 +417,15 @@ nav button, nav button:active, nav button:focus {
 
 #presale_details .slick-dots {
   visibility: visible;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: baseline;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
 }
 
 .slick-dots span.dot_hollow {
@@ -438,18 +452,26 @@ nav button, nav button:active, nav button:focus {
   visibility: visible!important;
 }
 
+@-webkit-keyframes show-point-line {
+  0% { -webkit-clip-path: inset(0 99% 0 0); clip-path: inset(0 99% 0 0); }
+  100% { -webkit-clip-path: inset(0 0% 0 0); clip-path: inset(0 0% 0 0); }
+}
+
 @keyframes show-point-line {
-  0% { clip-path: inset(0 99% 0 0); }
-  100% { clip-path: inset(0 0% 0 0); }
+  0% { -webkit-clip-path: inset(0 99% 0 0); clip-path: inset(0 99% 0 0); }
+  100% { -webkit-clip-path: inset(0 0% 0 0); clip-path: inset(0 0% 0 0); }
 }
 
 #color_year_carousel_indicator button .point_line_body {
-  clip-path: inset(100%);
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
 }
 
 #color_year_carousel_indicator button:hover .point_line_body, #color_year_carousel_indicator button:focus .point_line_body, #color_year_carousel_indicator button:active .point_line_body {
-  animation: 500ms ease-out show-point-line;
-  clip-path: inset(0 0% 0 0);
+  -webkit-animation: 500ms ease-out show-point-line;
+          animation: 500ms ease-out show-point-line;
+  -webkit-clip-path: inset(0 0% 0 0);
+          clip-path: inset(0 0% 0 0);
 }
 
 #color_year_carousel_indicator span {
@@ -485,12 +507,17 @@ nav button, nav button:active, nav button:focus {
   overflow: visible;
 }
 .slick-slide {
-  transform: translate3d(0,0,0);
+  -webkit-transform: translate3d(0,0,0);
+          transform: translate3d(0,0,0);
   opacity: 0;
+  -webkit-transition: opacity 500ms ease-out;
+  -o-transition: opacity 500ms ease-out;
   transition: opacity 500ms ease-out;
 }
 
 #presale_details .slick-slide {
+  -webkit-transition: none;
+  -o-transition: none;
   transition: none;
   opacity: 1;
 }
@@ -557,11 +584,13 @@ nav button, nav button:active, nav button:focus {
 }
 
 #for_creators svg {
-  filter: drop-shadow(0 15px 25px rgb(34 167 93 / .25));
+  -webkit-filter: drop-shadow(0 15px 25px rgb(34 167 93 / .25));
+          filter: drop-shadow(0 15px 25px rgb(34 167 93 / .25));
 }
 
 #for_holders svg {
-  filter: drop-shadow(0 15px 25px rgb(34 120 212 / .25));
+  -webkit-filter: drop-shadow(0 15px 25px rgb(34 120 212 / .25));
+          filter: drop-shadow(0 15px 25px rgb(34 120 212 / .25));
 }
 
 #makes_different_decor {
@@ -600,19 +629,23 @@ nav button, nav button:active, nav button:focus {
 }
 
 #quartals #q1 svg {
-  filter: drop-shadow(0 15px 25px rgb(34 167 93 / .25));
+  -webkit-filter: drop-shadow(0 15px 25px rgb(34 167 93 / .25));
+          filter: drop-shadow(0 15px 25px rgb(34 167 93 / .25));
 }
 
 #quartals #q2 svg {
-  filter: drop-shadow(0 15px 25px rgb(34 120 212 / .25));
+  -webkit-filter: drop-shadow(0 15px 25px rgb(34 120 212 / .25));
+          filter: drop-shadow(0 15px 25px rgb(34 120 212 / .25));
 }
 
 #quartals #q3 svg {
-  filter: drop-shadow(0 15px 25px rgb(255 209 0 / .25));
+  -webkit-filter: drop-shadow(0 15px 25px rgb(255 209 0 / .25));
+          filter: drop-shadow(0 15px 25px rgb(255 209 0 / .25));
 }
 
 #quartals #q4 svg {
-  filter: drop-shadow(0 15px 25px rgb(226 6 19 / .25));
+  -webkit-filter: drop-shadow(0 15px 25px rgb(226 6 19 / .25));
+          filter: drop-shadow(0 15px 25px rgb(226 6 19 / .25));
 }
 
 #quartals h4 {
@@ -708,6 +741,8 @@ nav button, nav button:active, nav button:focus {
 }
 
 .read_more_overlay {
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(15, 19, 32, 1)), to(rgba(15, 19, 32, 0)));
+  background: -o-linear-gradient(bottom, rgba(15, 19, 32, 1), rgba(15, 19, 32, 0));
   background: linear-gradient(to top, rgba(15, 19, 32, 1), rgba(15, 19, 32, 0));
 }
 
@@ -715,7 +750,8 @@ nav button, nav button:active, nav button:focus {
   font-family: "Century Gothic Bold"!important;
   font-size: 18px!important;
   color: var(--green);
-  text-decoration-style: dotted;
+  -webkit-text-decoration-style: dotted;
+          text-decoration-style: dotted;
 }
 
 #presale_details {
@@ -748,15 +784,18 @@ nav button, nav button:active, nav button:focus {
 }
 
 #presale_details #phase_one svg {
-  filter: drop-shadow(0 15px 25px rgb(34 167 93 / .25));
+  -webkit-filter: drop-shadow(0 15px 25px rgb(34 167 93 / .25));
+          filter: drop-shadow(0 15px 25px rgb(34 167 93 / .25));
 }
 
 #presale_details #phase_two svg {
-  filter: drop-shadow(0 15px 25px rgb(34 120 212 / .25));
+  -webkit-filter: drop-shadow(0 15px 25px rgb(34 120 212 / .25));
+          filter: drop-shadow(0 15px 25px rgb(34 120 212 / .25));
 }
 
 #presale_details #phase_three svg {
-  filter: drop-shadow(0 15px 25px rgb(255 209 0 / .25));
+  -webkit-filter: drop-shadow(0 15px 25px rgb(255 209 0 / .25));
+          filter: drop-shadow(0 15px 25px rgb(255 209 0 / .25));
 }
 
 #presale_details .presale_details_wrapper {
@@ -766,7 +805,8 @@ nav button, nav button:active, nav button:focus {
 #how_to_buy #buy_step_1, #how_to_buy #buy_step_2, #how_to_buy #buy_step_3 {
   padding: 70px 0;
   border-radius: 25px; 
-  clip-path: inset(0.5rem round 25px); 
+  -webkit-clip-path: inset(0.5rem round 25px); 
+          clip-path: inset(0.5rem round 25px); 
   background: var(--less-dark);
 }
 
@@ -787,11 +827,15 @@ nav button, nav button:active, nav button:focus {
 }
 
 .chevron_bridge.chev1 {
-  transform: translateY(100%) rotate(90deg);
+  -webkit-transform: translateY(100%) rotate(90deg);
+      -ms-transform: translateY(100%) rotate(90deg);
+          transform: translateY(100%) rotate(90deg);
 }
 
 .chevron_bridge.chev2 {
-  transform: translateY(-100%) rotate(90deg);
+  -webkit-transform: translateY(-100%) rotate(90deg);
+      -ms-transform: translateY(-100%) rotate(90deg);
+          transform: translateY(-100%) rotate(90deg);
 }
 
 #footer #copyright {
@@ -843,11 +887,15 @@ nav button, nav button:active, nav button:focus {
   #hero_gadget_carousel_wrapper {
     right: 0; 
     /* top: -25%; */
-    transform: translateY(25%);
+    -webkit-transform: translateY(25%);
+        -ms-transform: translateY(25%);
+            transform: translateY(25%);
   }
     
   #for_holders {
-    transform: translateY(90px);
+    -webkit-transform: translateY(90px);
+        -ms-transform: translateY(90px);
+            transform: translateY(90px);
   }
   
 
@@ -887,7 +935,9 @@ nav button, nav button:active, nav button:focus {
   }
 
   #makes_different_text div {
-    transform: translateY(16px); 
+    -webkit-transform: translateY(16px);
+        -ms-transform: translateY(16px);
+            transform: translateY(16px); 
     margin-bottom: 16px;
   }
 
@@ -920,7 +970,9 @@ nav button, nav button:active, nav button:focus {
   }
 
   #presale_details #phase_two {
-    transform: translateY(60px);
+    -webkit-transform: translateY(60px);
+        -ms-transform: translateY(60px);
+            transform: translateY(60px);
   }
 
   #presale_details .presale_details_wrapper {
@@ -930,24 +982,34 @@ nav button, nav button:active, nav button:focus {
   #presale_details {
     background: center / contain url("../img/triangles-clipped.svg") no-repeat;
     z-index: 9996;
-    transform: translateY(-20%);
+    -webkit-transform: translateY(-20%);
+        -ms-transform: translateY(-20%);
+            transform: translateY(-20%);
     /* margin-bottom: -20%; */
   }
     
   #presale_details #presale_details_content {
-    transform: translateY(20%); /* back to natural position */
+    -webkit-transform: translateY(20%);
+        -ms-transform: translateY(20%);
+            transform: translateY(20%); /* back to natural position */
   }
 
   #how_to_buy #buy_step_2 {
-    transform: translateY(60px);
+    -webkit-transform: translateY(60px);
+        -ms-transform: translateY(60px);
+            transform: translateY(60px);
   }
 
   .chevron_bridge.chev1 {
-    transform: translateY(0) rotate(0);
+    -webkit-transform: translateY(0) rotate(0);
+        -ms-transform: translateY(0) rotate(0);
+            transform: translateY(0) rotate(0);
   }
   
   .chevron_bridge.chev2 {
-    transform: translateY(0) rotate(0);
+    -webkit-transform: translateY(0) rotate(0);
+        -ms-transform: translateY(0) rotate(0);
+            transform: translateY(0) rotate(0);
   }
   
   #how_to_buy #buy_step_1, #how_to_buy #buy_step_2, #how_to_buy #buy_step_3 {
@@ -963,6 +1025,8 @@ nav button, nav button:active, nav button:focus {
     font-family: "Century Gothic Bold"!important;
     font-size: 16px!important;
     color: var(--white);
+    -webkit-transition: color 300ms ease-out;
+    -o-transition: color 300ms ease-out;
     transition: color 300ms ease-out;
   }
 
