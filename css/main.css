@@ -302,12 +302,16 @@ nav ul li, nav button {
   bottom: 0;
 }
 
+#side_menu_sm nav {
+  transform: translateY(-36px);
+}
 
 
 nav #side_menu {
   /* Center vertically */
-  top: 50%; 
-  transform: translateY(-50%);
+  /* bottom: 50%;  */
+  /* height: 75vh; */
+  /* transform: translateY(-50%); */
 }
 
 nav #side_menu a {
